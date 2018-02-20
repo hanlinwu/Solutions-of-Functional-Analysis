@@ -380,16 +380,26 @@
     \sum_{i=1}^N|\omega_i\xi_i|^p
     \right)^{1/p}.
     \]
-    
-    令$M=\max\limits_{1\leq\leq N}$\{|\omega_i|\}. 则
+    令$M=\max\limits_{1\leq i\leq N}\{|\omega_i|\}$. 则
     \[
-    \begin{alinged}
+    \begin{aligned}
       \|T_N\|_{\h L(\ell^p)}
-      &\leq M\sup_{\|\ell^p=1\|}\left(\sum_{i=1}^N|\xi_i|^p\right)^{1/p}\\
-      &\leq M \sup_{\|\ell^p=1\|}\|\xi\|_{\ell^p}\\
+      &\leq M\sup_{\|\ell^p\|=1}\left(\sum_{i=1}^N|\xi_i|^p\right)^{1/p}\\
+      &\leq M \sup_{\|\ell^p\|=1}\|\xi\|_{\ell^p}\\
       &= M.
-    \end{alinged}
+    \end{aligned}
     \]
+
+    由①, ②知 $T_N\in\h L(\ell^p)$. 再由注记1.2.4及$\dim R(T_N)<\infty$知$T_N\in\mathfrak C(\ell^p)$. 因
+    \[
+    \|T_N\xi-T\xi\|_{\ell^p}=\left(\sum_{i=N+1}^\infty|\omega_i\xi_i|^P\right)^{1/p}\leq
+    \sup_{n>N}|\omega_n|\|\xi\|_{\ell^p}.
+    \]
+    故
+    \[
+    \|T-T_N\|_{\h L(\ell^p)}=\sup_{\|\xi\|_{\ell^p}=1}\|T\xi-T_N\xi\|_{\ell^p}\leq\sup_{n\geq N}|\omega_n|\rightarrow 0, N\rightarrow\infty.
+    \]
+    由命题1.2.6(iii)知$T\in\mathfrak C(\ell^p)$.
   \end{proof}
   \begin{exercise}
   设$H$是Hilbert空间, $A$是$H$上紧算子. $\{e_n\}_{n\in\kx N}$是$H$的规范正交集. 证明
@@ -397,6 +407,30 @@
   \lim_{n\rightarrow\infty}(Ae_n,e_n)=0.
   \]
   \end{exercise}
+  \begin{proof}
+    因$\{e_n\}$为$H$的规范正交集, 所以由Bessel不等式有$\forall x\in\h X$, $\sum_{n=1}^\infty|(x,e_n)|^2\leq\|x\|^2$. 于是$\lim\limits_{n\rightarrow\infty}(x,e_n)=0, \forall x\in H$ 成立.
+
+    $\forall f\in\h X^*$, 由F$\cdot$Riesz定理, 存在唯一的$y_f\in\h X$, 使$f(x)=(x,y_f)$. 故$f(e_n)=(e_n,y_f)=\overline{(y_f,e_n)}$, 由于$y_f\in\h X$, 故$\lim\limits_{n\rightarrow\infty}(y_f,e_n)=0$. 于是$\lim\limits_{n\rightarrow\infty}\overline{(y_f,e_n)}=0$, 从而$\lim\limits_{n\rightarrow\infty}f(e_n)=0$, 故$e_n\rightharpoonup 0$.
+
+    由命题1.2.14知, $A$是全连续算子, 故$Ae_n\rightarrow 0$. 由《泛函分析（上册）》习题2.5.18知, 在$H$中$x_n\rightharpoonup x_0, y_n\rightarrow y_0$, 有$(x_n,y_n)\rightarrow(x_0,y_0)$. 故$\lim\limits_{n\rightarrow\infty}(Ae_n,e_n)=0$.
+  \end{proof}
+  \begin{exercise}
+    证明注记1.2.23中的$\ell^2(\Gamma)$为Hilbert空间.
+  \end{exercise}
+  \begin{proof}
+    首先证明$\ell^2(\Gamma)$为内积空间.
+
+    ①$(f,g)=\sum_{x\in\Gamma}f(x)g(x)=\sum_{x\in\Gamma}g(x)f(x)=(g,f)$.
+
+    ②$(f,f)=\sum_{x\in\Gamma}[f(x)]^2\geq 0$.
+
+    ③$(f,f)=\sum_{x\in\Gamma}[f(x)]^2=0\Leftrightarrow f(x)\equiv 0$.
+
+    下证完备性. 任取$\ell^2(\Gamma)$中的基本列$f^{(n)}$, 则
+    \[
+    \|f_m-f_n\|_{\ell^2(\Gamma)}:=\{\sum_{x\in\Gamma}|f_m(x)-f_n(x)|^2\}^{1/2}\rightarrow 0, m,n\rightarrow\infty.
+    \]
+  \end{proof}
   \subsection{紧算子的谱理论}
   \begin{exercise}[原第3题]
     设$\{a_n\}_{n\in\kx N}\subset\kx C,$在$\ell^2$上定义算子

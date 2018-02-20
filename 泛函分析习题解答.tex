@@ -389,11 +389,11 @@
       &= M.
     \end{aligned}
     \]
-    
+
     由①, ②知 $T_N\in\h L(\ell^p)$. 再由注记1.2.4及$\dim R(T_N)<\infty$知$T_N\in\mathfrak C(\ell^p)$. 因
     \[
     \|T_N\xi-T\xi\|_{\ell^p}=\left(\sum_{i=N+1}^\infty|\omega_i\xi_i|^P\right)^{1/p}\leq
-    \sup_{n>N}|\omega_n|\|\xi\|_{\ell^p}. 
+    \sup_{n>N}|\omega_n|\|\xi\|_{\ell^p}.
     \]
     故
     \[
@@ -408,8 +408,79 @@
   \]
   \end{exercise}
   \begin{proof}
-    因$\{e_n\}$为$H$的规范正交集, 所以由Bessel不等式有$\forall x\in\h X$, $\sum_{n=1}^\infty|(x,e_n)|^2\leq\|x\|^2$. 于是
+    因$\{e_n\}$为$H$的规范正交集, 所以由Bessel不等式有$\forall x\in\h X$, $\sum_{n=1}^\infty|(x,e_n)|^2\leq\|x\|^2$. 于是$\lim\limits_{n\rightarrow\infty}(x,e_n)=0, \forall x\in H$ 成立.
+
+    $\forall f\in\h X^*$, 由F$\cdot$Riesz定理, 存在唯一的$y_f\in\h X$, 使$f(x)=(x,y_f)$. 故$f(e_n)=(e_n,y_f)=\overline{(y_f,e_n)}$, 由于$y_f\in\h X$, 故$\lim\limits_{n\rightarrow\infty}(y_f,e_n)=0$. 于是$\lim\limits_{n\rightarrow\infty}\overline{(y_f,e_n)}=0$, 从而$\lim\limits_{n\rightarrow\infty}f(e_n)=0$, 故$e_n\rightharpoonup 0$.
+
+    由命题1.2.14知, $A$是全连续算子, 故$Ae_n\rightarrow 0$. 由《泛函分析（上册）》习题2.5.18知, 在$H$中$x_n\rightharpoonup x_0, y_n\rightarrow y_0$, 有$(x_n,y_n)\rightarrow(x_0,y_0)$. 故$\lim\limits_{n\rightarrow\infty}(Ae_n,e_n)=0$.
   \end{proof}
+  \begin{exercise}
+    证明注记1.2.23中的$\ell^2(\Gamma)$为Hilbert空间.
+  \end{exercise}
+  \begin{proof}
+    首先证明$\ell^2(\Gamma)$为内积空间.
+
+    ①$(f,g)=\sum_{x\in\Gamma}f(x)g(x)=\sum_{x\in\Gamma}g(x)f(x)=(g,f)$.
+
+    ②$(f,f)=\sum_{x\in\Gamma}[f(x)]^2\geq 0$.
+
+    ③$(f,f)=\sum_{x\in\Gamma}[f(x)]^2=0\Leftrightarrow f(x)\equiv 0$.
+
+    下证完备性. 任取$\ell^2(\Gamma)$中的基本列$f^{(n)}$, 则
+    \[
+    \|f_m-f_n\|_{\ell^2(\Gamma)}:=\left\{\sum_{x\in\Gamma}|f_m(x)-f_n(x)|^2\right\}^{1/2}\rightarrow 0, m,n\rightarrow\infty.
+    \]
+    那么, $|f_m(x)-f_n(x)|\rightarrow 0, m,n\rightarrow \infty$. 即$\{f_n(x)\}_{n\in\kx N}$为$\kx R$中的Cauchy列. 可设其极限函数
+    \[
+    f(x)=\left\{
+    \begin{aligned}
+      &\lim_{n\rightarrow\infty}f_n(x),x\in\cup_{n=1}^{\infty}\{x\in\Gamma:f_n(x)\neq 0\},\\
+      &0, \text{其它}.
+    \end{aligned}
+    \right.
+    \]
+    那么
+    \[
+    \begin{aligned}
+    \|f_n-f\|_{\ell^2(\Gamma)}&=\left\{\sum_{x\in\Gamma}\lim_{m\rightarrow\infty}|f_n(x)-f_m(x)|^2\right\}^{1/2}\\
+    \text{(Fatou引理)}&\leq \liminf_{m\rightarrow\infty}\left\{\sum_{x\in\Gamma}|f_n(x)-f_m(x)|^2\right\}^{1/2}.
+    \end{aligned}
+    \]
+    再令$n\rightarrow\infty$, 则
+    \[
+    \lim_{n\rightarrow\infty}\|f_n-f\|_{\ell^2(\Gamma)}
+    \leq\lim_{n\rightarrow\infty}\lim_{m\rightarrow\infty}
+    \left\{
+    \sum_{x\in\Gamma}|f_n(x)-f_m(x)|^2
+    \right\}=0.
+    \]
+    即$f_n\rightarrow f \text{ in } \ell^2(\Gamma)$. $\|f\|_{\ell^2(\Gamma)}\leq\|f_n-f\|_{\ell^2(\Gamma)}+\|f_n\|_{\ell^2(\Gamma)}<\infty$.
+    完备性得证.
+  \end{proof}
+  \begin{exercise}
+    设$\h X$为线性赋范空间, $\h Y$为Hilbert空间. 证明$\overline{F(\h X, \h Y)}=\mathfrak C(\h X,\h Y)$.
+  \end{exercise}
+  \begin{proof}
+    同书中定理.
+  \end{proof}
+  \begin{exercise}
+    设$\h X$为线性赋范空间, $\h Y$为具有Schauder基的Banach空间. 证明$\overline{F(\h X, \h Y)}=\mathfrak C(\h X,\h Y)$.
+  \end{exercise}
+ \begin{proof}
+    同书中定理.
+  \end{proof}
+  \begin{exercise}[补充题]
+    定义$T:\left\{\begin{aligned}
+      &\ell^2\rightarrow\ell^2\\
+      &\{\xi_i\}_{i\in\kx N}\mapsto\{\sum_{j=1}^{\infty}a_{ij}\xi_j\}_{i\in\kx N}.
+    \end{aligned}\right.$
+    其中$\{a_{ij}\}_{i,j\in\kx N}\subset\kx C$. 满足$\sum_{i=1}^{\infty}\sum_{j=1}^{\infty}|a_{ij}|^2<\infty$.
+    \begin{enumerate}[i)]
+      \item 证明$T$是$\ell^2$上的紧算子.
+      \item 举例说明: 存在无穷维的矩阵$(a_{ij})$使$\sum_{i=1}^{\infty}\sum_{j=1}^{\infty}|a_{ij}|^2=\infty$. 但按上述定义的$T$仍然是紧算子.
+      \item 若$\forall i\neq j, a_{ij}=0$. 证明: $T$是紧算子$\Longleftrightarrow$$a_{mm}\rightarrow 0,n\rightarrow\infty$.
+    \end{enumerate}
+  \end{exercise}
   \subsection{紧算子的谱理论}
   \begin{exercise}[原第3题]
     设$\{a_n\}_{n\in\kx N}\subset\kx C,$在$\ell^2$上定义算子
