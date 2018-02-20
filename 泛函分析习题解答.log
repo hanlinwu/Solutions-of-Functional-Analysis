@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.12.27)  18 FEB 2018 16:27
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.12.27)  20 FEB 2018 15:32
 entering extended mode
 **C:/我的师大云盘/2学习文档/2017-2018A/泛函作业/泛函习题/泛�
 ��分析习题解答.tex
@@ -710,7 +710,7 @@ LaTeX Font Info:    Try loading font information for U+euf on input line 338.
  (C:\CTEX\MiKTeX\tex\latex\amsfonts\ueuf.fd
 File: ueuf.fd 2009/06/22 v3.00 Euler Fraktur
 ) [8] [9]
-Overfull \hbox (10.48065pt too wide) in paragraph at lines 438--439
+Overfull \hbox (10.48065pt too wide) in paragraph at lines 461--462
 []\C19/rm/m/it/10.95/55 $\U/rsfs/m/n/10.95 B$\C19/rm/m/it/10.95/45 9 \C19/rm/m
 /it/10.95/52 � \C19/rm/m/it/10.95/56 � \C19/rm/m/it/10.95/45 P \C19/rm/m/it/10.
 95/43 � \C19/rm/m/it/10.95/57 � \C19/rm/m/it/10.95/40 � \C19/rm/m/it/10.95/48 n
@@ -724,8 +724,8 @@ it/10.95/50 �$\OMS/cmsy/m/n/10.95 k\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 e\OT
 1/cmr/m/n/10.95 ]\OMS/cmsy/m/n/10.95 k \OT1/cmr/m/n/10.95 =$
  []
 
-[10]
-Overfull \hbox (3.41432pt too wide) in paragraph at lines 524--525
+[10] [11]
+Overfull \hbox (3.41432pt too wide) in paragraph at lines 547--548
 []\C19/rm/m/it/10.95/55 $\U/rsfs/m/n/10.95 A$\C19/rm/m/it/10.95/55 � \C19/rm/m
 /it/10.95/61 � \C19/rm/m/it/10.95/42 � \C19/rm/m/it/10.95/46  \C19/rm/m/it/10.
 95/44 � \C19/rm/m/it/10.95/40 $\OML/cmm/m/it/10.95 C[]$\C19/rm/m/it/10.95/39 �
@@ -737,14 +737,14 @@ Overfull \hbox (3.41432pt too wide) in paragraph at lines 524--525
 m/it/10.95/58 �\OT1/cmr/m/it/10.95 Hermite
  []
 
-[11] [12]
+[12] [13]
 (C:\我的师大云盘\2学习文档\2017-2018A\泛函作业\泛函习题\泛�
 �分析习题解答.aux) ) 
 Here is how much of TeX's memory you used:
- 12526 strings out of 495354
- 195677 string characters out of 3183858
+ 12528 strings out of 495354
+ 195714 string characters out of 3183858
  244380 words of memory out of 3000000
- 15361 multiletter control sequences out of 15000+200000
+ 15363 multiletter control sequences out of 15000+200000
  48147 words of font info for 169 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  36i,13n,35p,926b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -794,9 +794,9 @@ pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/CTEX/MiKTeX/f
 onts/type1/public/amsfonts/euler/eufm10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb><C:/CTEX/MiKTeX/fonts/type1/hoekwater/rsfs/rsfs10.p
 fb><C:/CTEX/MiKTeX/fonts/type1/hoekwater/rsfs/rsfs5.pfb>
-Output written on 泛函分析习题解答.pdf (12 pages, 632374 bytes).
+Output written on 泛函分析习题解答.pdf (13 pages, 636942 bytes).
 PDF statistics:
- 461 PDF objects out of 1000 (max. 8388607)
+ 465 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
