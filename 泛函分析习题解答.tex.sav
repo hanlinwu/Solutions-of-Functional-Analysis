@@ -335,9 +335,9 @@
     证明: 若$\h X$为无穷维Banach空间, 则$\h X$上紧算子没有有界逆.
   \end{exercise}
   \begin{proof}
-    若不然, $A\in \mathfrak C$且$A$有有界逆, 即$A^{-1}\in\h L(\h X)$. 由命题1.2.6(vi) 可知, $AA^{-1}=I\in\mathfrak C(\h X)$. $\forall B\in\h X$且$B$ 为有界集, $\overline{I(B)}$为$\h X$中的紧集. 从而$\overline B$为$\h X$中的紧集, 故$\overline{B}$自列紧.
+    若不然, $A\in \mathfrak C$且$A$有有界逆, 即$A^{-1}\in\h L(\h X)$. 由命题1.2.6(vi) 可知, $AA^{-1}=I\in\mathfrak C(\h X)$. $\forall B\in\h X$且$B$为有界集, $\overline{I(B)}$为$\h X$中的紧集. 从而$\overline B$为$\h X$中的紧集, 故$\overline{B}$自列紧.
 
-    $\forall\{x_n\}_{n\in\kx N}\subset B\subset \overline B$, 由$\overline B$ 是自列紧的知$\{x_n\}_{n\in\kx N}$有收敛子列, 故$B$是列紧的. 由《泛函分析(上册)》推论1.4.30: “$B^*$空间$\h X$是有穷维的, 当且仅当任意有界集是列紧的.” 可知$\h X$是有穷维的. 矛盾.
+    $\forall\{x_n\}_{n\in\kx N}\subset B\subset \overline B$, 由$\overline B$是自列紧的知$\{x_n\}_{n\in\kx N}$有收敛子列, 故$B$是列紧的. 由《泛函分析(上册)》推论1.4.30: “$B^*$空间$\h X$是有穷维的, 当且仅当任意有界集是列紧的.” 可知$\h X$是有穷维的. 矛盾.
   \end{proof}
   \begin{exercise}
     设$\h X$为Banach空间, $A\in\h L(\h X)$. 满足对$\forall x \in\h X$,
@@ -482,7 +482,7 @@
     \end{enumerate}
   \end{exercise}
   \begin{proof}
-    i) 令$T_N(\{\xi_i\}_{i\in\kx N}):=\{\sum_{j=1}^{\infty}a_{ij}\xi_j,\cdots,\sum_{j=1}^{\infty}a_{Nj}\xi_j,0,\cdots\}$, 则$\dim(R(T))<\infty$. 往证$T_N\in\h L(\ell^2)$.
+    i) 令$T_N(\{\xi_i\}_{i\in\kx N}):=\{\sum_{j=1}^{\infty}a_{ij}\xi_j,\cdots,\sum_{j=1}^{\infty}a_{Nj}\xi_j,0,\cdots\}$, 则$\dim(R(T))<\infty$. 往证$T_N\in\h L(\ell^2)$. 
     \[
     \begin{aligned}
     \|T_N\|_{\h L(\ell^2)}&:=\sup_{\|\xi\|_{\ell^2}=1}\|T_N\xi\|_{\ell^2}\\
@@ -496,142 +496,12 @@
       \|T-T_N\|_{\h L(\ell^2)}
       &=\sup_{|\xi|_{\ell^2}=1}\left\{\sum_{i=N+1}^{\infty}|\sum_{j=1}^{\infty}a_{ij}\xi_j|^2\right\}^{1/2}\\
       &\leq\sup_{\|\xi\|_{\ell^2}=1}\left\{\sum_{i=N+1}^{\infty}(\sum_{j=1}^{\infty}|a_{ij}|^2)(\sum_{j=1}^{\infty}|xi_j|^2)\right\}^{1/2}\\
-      &=\left\{\sum_{i=N+1}^{\infty}\sum_{j=N+1}^\infty|a_{ij}|^2\right\}^{1/2},\ N\rightarrow\infty.
+      &=\left\{\sum_{i=N+1}^{\infty}\right\}
     \end{aligned}
     \]
-    从而由命题1.2.6(iii)知, $T\in\mathfrak C(\ell^2)$.
-
-    ii) 令
-    \[
-    (a_{ij})=\left(
-    \begin{matrix}
-      1 & 0 & \cdots & 0 & \cdots\\
-      0 & \frac{1}{\sqrt 2} & \cdots & 0 & \cdots \\
-      \vdots & \vdots &\ddots & \vdots &  \\
-      0 & 0 & \cdots & \frac{1}{\sqrt n} & \cdots \\
-      \vdots & \vdots & & \vdots & \ddots
-    \end{matrix}
-    \right).
-    \]
-    则 $\sum_{i=1}^\infty\sum_{j=1}^\infty|a_{ij}|^2=\sum_{n=1}^\infty\frac{1}{n}=\infty$. 由例题1.3.7知, $T$为紧算子.
-
-    iii) 由习题1.2.5知, $a_{m,m}\rightarrow 0 ,m\rightarrow 0 \Longrightarrow T\in\mathfrak C(\ell^2)$. 若$T\in \mathfrak C(\ell^2)$, 则$T\in\h L(\ell^2)$. 于是
-    \[
-    \|T\|_{\h L(\ell^2)}=\sup_{\|\xi\|_{\ell^2}=1}\|T\xi\|_{\ell^2}\leq
-    \left(\sum_{i=1}^{\infty}\sum_{j=1}^{\infty}|a_{ij}|^2\right)^{1/2}<\infty.
-    \]
-    则$\lim\limits_{m\rightarrow\infty}a_{m,m}=0$.
   \end{proof}
   \subsection{紧算子的谱理论}
-  \begin{exercise}
-    举例说明Banach空间$\h X$及$A\in\mathfrak C(\h X)$, 但$0\notin\sigma(A)$.
-  \end{exercise}
-
-  \noindent\textbf{解 }: 固定$n\in\kx N$, 取$\h X:=\kx R^n$. 定义$A:=I$. 对$\h X$中任意有界集$B$, $\overline{I(B)}=\overline{B}$为有界闭集. 由于有限维Banach空间中紧集$\Longleftrightarrow$有界闭集. 故$I$为紧算子. 又由于$I^{-1}=I\in\h L(\kx R^n)$. 故$0\notin\sigma(A)$.
-
-  \begin{exercise}
-    举例说明注记1.3.4情形(i)中的连续谱, 情形(ii)中的连续谱, 剩余谱, 情形(iii) 中的剩余谱.
-  \end{exercise}
-  \noindent\textbf{解 }: (i) 取$\{\lambda_i\}_{i\in\kx Z_+}, \lambda_i\neq 0, \forall i\in\kx Z_+$且$\lambda_i\rightarrow 0, i\rightarrow\infty$. 定义
-  \[
-  \ell^2(\kx Z):=\left\{\{x_n\}_{n\in\kx Z}:\left(\sum_{n\in\kx Z}x_n^2\right)^{1/2}<\infty\right\}
-  \]
-  和
-  \[
-  T_1:\left\{
-  \begin{aligned}
-    &\ell^2(\kx Z)\rightarrow \ell^2(\kx Z)\\
-    & (\cdots,x_{-2},x_{-1},x_0,x_1,x_2,\cdots)\mapsto (\cdots,\lambda_2 x_{-2},\lambda_1 x_{-1},\lambda_0 x_0,\lambda_1 x_1,\lambda_2 x_2,\cdots),
-  \end{aligned}
-  \right.
-  \]
-  则$T_1$是紧算子. 事实上, 对于$\forall m\in\kx N$. 定义
-  \[
-  T_1^{(m)}(\{x_n\}_{n\in\kx Z}):=\{\cdots,0,\lambda_m x_{-m},\cdots,\lambda_0 x_0,\cdots,\lambda_m x_m,0,\cdots\},
-  \]
-  则$T_1^{(m)}\in\h F(\ell^2(\kx Z))$. 由$\lim\limits_{i\rightarrow\infty}\lambda_i=0$知, $\forall \varepsilon > 0, \exists N^*\in\kx N$, 使当$i>N^*$时, $|\lambda_i|<\varepsilon$. 此时
-  \[
-  \begin{aligned}
-  \|T_1^{(m)}-T_1\|_{\h L(\ell^2(Z))}
-  &= \sup_{\|x\|=1}\|(T_1{(m)}-T_1)x\|_{\ell^2(\kx Z)}\\
-  &= \sup_{\|x\|=1}\left\{\sum_{|n|>m}|\lambda_n|^2|x_n|^2\right\}^{1/2}<\varepsilon.
-  \end{aligned}
-  \]
-  对于$T_1$, 寻找到了一列有穷秩算子, 且依范数收敛到$T_1$, 故$T_1\in\mathfrak C(\ell^2(\kx Z))$. 由于$\dim(\ell^2(\kx Z))=\infty$, 又由定理1.3.1(i)知, $0\in\sigma(T_1)$.
-
-  先证$\sigma(T_1)=\{0\}$. 事实上, 对$\forall\lambda\in\kx C\backslash\{0\}$. 若$\{x_n\}_{n\in\kx Z}\in\ell^2(\kx Z)$满足$(\lambda I-T_1)(\{x_n\}_{n\in\kx Z})=\theta$, 则$\lambda x_n-\lambda_{|n-1|}x_{n-1}=0, \forall n\in\kx Z$. 故
-  \[
-    x_n=\left\{
-    \begin{aligned}
-      &\frac{\lambda_0\lambda_1\cdots\lambda_{n-1}}{\lambda^n}x_0,n\in\kx N\\
-      &\frac{\lambda^{|n|}}{\lambda_1\lambda_2\cdots\lambda_{|n|}}x_0,n\in\kx Z\backslash\kx Z_+.
-    \end{aligned}
-    \right.
-  \]
-  由此及$\{x_n\}_{n\in\kx Z}\in\ell^2(\kx Z)$有$x_0=0\Longrightarrow\{x_n\}_{n\in\kx Z}=\theta$. 即$\sigma(T_1)=\{0\}$.
-
-  再证$\{0\}=\sigma_c(T_1)$. 注意到若$\{x_n\}_{n\in\kx Z}\in\ell^2(\kx Z)$满足$T_1(\{x_n\}_{n\in\kx Z})=\theta$. 则对$\forall n\in\kx Z,\lambda_{|n|}x_n=0\Rightarrow x_n=0$. 所以$\{x_n\}_{n\in\kx Z}=\theta$. 即$0\notin\sigma_p(T_1)$且$T_1$为单射, 因此$T_1^{-1}$存在. 又因为$\{e_n\}_{n\in\kx Z}\subset R(T_1)$且$\{e_n\}_{n\in\kx Z}$为$\ell^2(\kx Z)$ 的一组Schauder基. 故$\overline{R(T_1)}=\ell^2(\kx Z)$. 因此$\{0\}=\sigma_c(T_1)$. 即$T_1$满足要求.
-
-  (ii)-(a)(连续谱) 令$\ell^2(\kx Z), T_1$如(i)中. 给定$m\in\kx N$与$\{\lambda_1\}_{i=1}^m\subset\kx C$. 定义
-  \[
-  T_2:\left\{
-  \begin{aligned}
-    \kx C^m&\rightarrow\kx C^m\\
-    (x_1,\cdots,x_m)&\mapsto(\lambda_1 x_1,\cdots,\lambda_m x_m)
-  \end{aligned}
-  \right.
-  \]
-  和
-  \[
-  A_1:\left\{
-  \begin{aligned}
-    \kx C^m\oplus\ell^2(\kx Z)&\rightarrow \kx C^m\oplus\ell^2(\kx Z)\\
-    x\oplus y&\mapsto T_2 x\oplus T_1y
-  \end{aligned}
-  \right.
-  \]
-  且对$\forall x\oplus y\in\kx C^m + \ell^2(\kx Z), \|x+y\|_{\kx C^m\oplus\ell^2(\kx Z)}:=\|x\|_{\kx C^m}+\|y\|_{\ell^2(\kx Z)}$. 则$A_1$为紧算子且$\sigma(A_1)=\sigma_c(A_1)\cup\sigma_p(A_1)$. 其中$\sigma_c(A_1)=\{0\}, \sigma_p(A_1)=\{\lambda_i\}_{i=1}^m$.
-
-  (ii)-(b)(剩余谱) 令$T_2$如(a)中所示, 给定$\{\mu_i\}_{i=1}^{\infty}\subset\kx C, \mu_i\neq 0. \forall i\in\kx N$且$\mu_i\rightarrow 0, i\rightarrow \infty$. 定义
-  \[
-  T_3:\left\{
-  \begin{aligned}
-    \ell^2&\rightarrow\ell^2\\
-    \{a_k\}_{k\in\kx N}&\mapsto\{0,\mu_1a_1,\mu_2a_2,\cdots\}
-  \end{aligned}
-  \right.
-  \]
-  和
-  \[
-  A_2:\left\{
-  \begin{aligned}
-  \kx C^m\oplus\ell^2&\rightarrow\kx C^m\oplus\ell^2\\
-  x\oplus y&\mapsto T_2x\oplus T_3y.
-  \end{aligned}
-  \right.
-  \]
-  且对$\forall x\oplus y\in\kx C^m\oplus\ell^2,\|x\oplus y\|_{\kx C^m\oplus\ell^2}:=\|x\|_{\kx C^m}+\|y\|_{\ell^2}$. 则$A_2$为紧算子且$\sigma(A_2)=\sigma_r(A_2)\cup\sigma_p(A_2)$. 其中$\sigma_r(A_2)=\{0\}, \sigma_p(A_2)=\{\lambda_i\}_{i=1}^{m}$.
-
-  (iii) 令$T_3$和$\{\mu_i\}_{i\in\kx N}$如(ii)所示. 定义
-  \[
-  T_4:\left\{
-  \begin{aligned}
-    \ell^2&\rightarrow\ell^2\\
-    \{a_k\}_{k\in\kx N}&\mapsto\{\mu_k a_k\}_{k\in\kx N}.
-  \end{aligned}
-  \right.
-  \]
-  和
-  \[
-  A_3:\left\{
-  \begin{aligned}
-    \ell^2\oplus\ell^2&\rightarrow\ell^2\oplus\ell^2\\
-    x\oplus y&\mapsto T_3 x\oplus T_4 y.
-  \end{aligned}
-  \right.
-  \]
-  且对$\forall x\oplus y\in\ell^2\oplus\ell^2, \|x\oplus y\|_{\ell^2\oplus\ell^2}:=\|x\|_{\ell^2}+\|y\|_{\ell^2}$. 则$A_3$为紧算子且$\sigma(A_3)=\sigma_r(A_3)\cup\sigma_p(A_3)$, 其中$\sigma_r(A_3)=\{0\}, \sigma_p(A_3)=\{\mu_i\}_{i\in\kx N}.$
-  \begin{exercise}
+  \begin{exercise}[原第3题]
     设$\{a_n\}_{n\in\kx N}\subset\kx C,$在$\ell^2$上定义算子
     \[
     A : (x_1,x_2,\cdots)\rightarrow(a_1 x_1,a_2 x_2,\cdots)
@@ -639,23 +509,6 @@
     (1) 证明：$A$在$\ell^2$上有界当且仅当$\{a_n\}_{n\in\kx N}$为有界数列.\\
     (2) 若$A$有界. 求$\sigma(A)$.
   \end{exercise}
-  \begin{proof}
-    (1)($\Rightarrow$) 反证法. 若$\sup_{i\in\kx N}|a_i|=\infty$, 对$\forall k\in\kx N$, 取$e_k:=(0,0,\cdots,1,0,\cdots)$. 则$\|Ae_k\|_{\ell^2}=1$. 故由算子范数定义知$\|A\|\geq\|Ae_k\|_{\ell^2}=|a_k|$. 因此$\infty=\sup_{k\in\kx N}|a_k|\leq\|A\|$. 这与$A\in\h L(\ell^2)$矛盾. 即$\sup_{i\in\kx N}|a_i|<\infty$. 即$\{a_i\}_{i\in\kx N}$为有界数列.
-
-    ($\Leftarrow$) $A$显然为线性算子且对$\forall x\in\ell^2$, 有
-    \[
-    \|Ax\|_{\ell^2}=\left[\sum_{i\in\kx N}|a_ix_i|^2\right]^{1/2}\leq\sup_{i\in\kx N}|a_i|\|x\|_{\ell^2}.
-    \]
-    于是$\|A\|\leq\sup_{i\in\kx N}|a_i|<\infty$. 故$A\in\h L(\ell^2)$.
-
-    (2) 取$\lambda :=a_i$, 和$e_i=(0,0,\cdots,0,1,0,\cdots),i\in\kx N$. 因$(\lambda I-A)e_i=\theta$. 故$\lambda\in\sigma_p(A)\subset\sigma(A)$. 又由$A$有界及推论1.1.11知$\sigma(A)$闭. 故$\overline{\{a_i:i\in\kx N\}}\subset\sigma(A)$. 
-    
-    下证$\sigma(A)\subset\overline{\{a_i:i\in\kx N\}}$, 为此只需证明$\forall \lambda\in\overline{\{a_i:i\in\kx N\}}$, 有$\lambda\notin\sigma(A)$. 事实上, 对$\forall\lambda\notin\overline{\{a_i:i\in\kx N\}}$与$x\in\ell^2$满足
-    \[
-    (\lambda I-A)(x_1,x_2,\cdots)=((\lambda-a_1)x_1,(\lambda-a_2)x_2,\cdots)=\theta.
-    \]
-    有$x_i=0,\forall i\in\kx N$, 即$x=\theta$. 故$(\lambda I-A)$为单射, 即$(\lambda I-A)^{-1}$存在. 注意到对$\forall \lambda\notin\overline{\{a_i:i\in\kx N\}}$, 存在正常数$c$, 使得对
-  \end{proof}
   \begin{exercise}[补充题]
   给定数列$\{a_n\}_{n=1}^\infty$, 定义$A: \left\{
   \begin{aligned}
@@ -736,7 +589,7 @@
     \]
   \end{exercise}
   \begin{exercise}
-    设$\h X$为线性赋范空间, 若$S$为$\h X^*$ 的$*$ 弱闭集且有界. 证明$S$是$*$ 弱紧的.
+    设$\h X$为线性赋范空间, 若$S$为$\h X^*$ 的$*$ 弱闭集且有界. 证明$S$是$*$弱紧的.
   \end{exercise}
   \begin{exercise}[补充题]
     设$\h A$是Banach代数, 则对$\forall x\in\h A$. 极限$\lim\limits_{n\rightarrow\infty}\sqrt[n]{\|x^n\|}$ 存在且等于$\inf\limits_{n\in\kx N}\sqrt[n]{\|x^n\|}.$
@@ -781,7 +634,7 @@
     证明交换半单有单位元的Banach代数上的任意对合运算均连续.
   \end{exercise}
   \begin{exercise}[补充题]
-    设$\h A$是一个交换的$C^*$代数. 设其单位元为$e$. 若$\forall x\in\h A$.$x$ 为Hermite 元且$\sigma(x)\subset [0,\infty)$. 则称$x$是正的, 记作$x\geq 0$. 证明:
+    设$\h A$是一个交换的$C^*$代数. 设其单位元为$e$. 若$\forall x\in\h A$.$x$为Hermite 元且$\sigma(x)\subset [0,\infty)$. 则称$x$是正的, 记作$x\geq 0$. 证明:
     \begin{enumerate}[(1)]
       \item$x\geq 0\Longleftrightarrow\exists h\in\h A$是Hermite元, 使得$x=h^2$.
       \item$x\geq 0\Longleftrightarrow x$ 为Hermite元且$\|\|x\|e-x\|\leq\|x\|$.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.12.27)  20 FEB 2018 19:57
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.12.27)  22 FEB 2018 20:56
 entering extended mode
 **C:/ÊàëÁöÑÂ∏àÂ§ß‰∫ëÁõò/2Â≠¶‰π†ÊñáÊ°£/2017-2018A/Ê≥õÂáΩ‰Ωú‰∏ö/Ê≥õÂáΩ‰π†È¢ò/Ê≥õÂ
 áΩÂàÜÊûê‰π†È¢òËß£Á≠î.tex
@@ -721,8 +721,53 @@ m\OT1/cmr/m/it/10.95 . \C19/rm/m/it/10.95/64 y \C19/rm/m/it/10.95/50 ≤$[] \OT1/
 cmr/m/n/10.95 =$
  []
 
-[10]
-Overfull \hbox (10.48065pt too wide) in paragraph at lines 532--533
+[10] [11]
+Overfull \hbox (8.89186pt too wide) in paragraph at lines 559--561
+\C19/rm/m/n/10.95/40 È \C19/rm/m/n/10.95/62 u$\OML/cmm/m/it/10.95 T[]$\OT1/cmr/
+m/n/10.95 , \C19/rm/m/n/10.95/60 œ \C19/rm/m/n/10.95/63 È \C19/rm/m/n/10.95/40 
+ \C19/rm/m/n/10.95/49 
+ \C19/rm/m/n/10.95/61 ò \C19/rm/m/n/10.95/49  \C19/rm/m/n/10.95/62 k \C19/rm/m
+/n/10.95/53 ° \C19/rm/m/n/10.95/64 ù \C19/rm/m/n/10.95/56 é \C19/rm/m/n/10.95/6
+5 f\OT1/cmr/m/n/10.95 , \C19/rm/m/n/10.95/53 Ö \C19/rm/m/n/10.95/61 ù \C19/rm/m
+/n/10.95/41 â \C19/rm/m/n/10.95/55 Í ¬ \C19/rm/m/n/10.95/48 Ò \C19/rm/m/n/10.95
+/40 $\OML/cmm/m/it/10.95 T[]$\OT1/cmr/m/n/10.95 , \C19/rm/m/n/10.95/43 $\OML/
+cmm/m/it/10.95 T[] \OMS/cmsy/m/n/10.95 2 \U/euf/m/n/10.95 C\OT1/cmr/m/n/10.95 (
+\OML/cmm/m/it/10.95 `[]\OT1/cmr/m/n/10.95 (\U/msb/m/n/10.95 Z\OT1/cmr/m/n/10.95
+ ))$. \C19/rm/m/n/10.95/62 d u$[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 `[]\OT
+1/cmr/m/n/10.95 (\U/msb/m/n/10.95 Z\OT1/cmr/m/n/10.95 )) =$
+ []
+
+
+Overfull \hbox (13.79973pt too wide) in paragraph at lines 562--563
+[]\C19/rm/m/n/10.95/59 k \C19/rm/m/n/10.95/64 y$\OML/cmm/m/it/10.95 \OT1/cmr/m
+/n/10.95 (\OML/cmm/m/it/10.95 T[]\OT1/cmr/m/n/10.95 ) = \OMS/cmsy/m/n/10.95 f\O
+T1/cmr/m/n/10.95 0\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.95 . \C19/rm/m/n/10.95/
+55 Ø ¢ \C19/rm/m/n/10.95/54 ˛\OT1/cmr/m/n/10.95 , \C19/rm/m/n/10.95/40 È$\OMS/c
+msy/m/n/10.95 8\OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95 2 \U/msb/m/n/10.95 C\O
+MS/cmsy/m/n/10.95 nf\OT1/cmr/m/n/10.95 0\OMS/cmsy/m/n/10.95 g$\OT1/cmr/m/n/10.9
+5 . \C19/rm/m/n/10.95/54 e$\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 x[]\OMS/cms
+y/m/n/10.95 g[] 2 \OML/cmm/m/it/10.95 `[]\OT1/cmr/m/n/10.95 (\U/msb/m/n/10.95 Z
+\OT1/cmr/m/n/10.95 )$\C19/rm/m/n/10.95/49 ˜ \C19/rm/m/n/10.95/65 v$\OT1/cmr/m/n
+/10.95 (\OML/cmm/m/it/10.95 I \OMS/cmsy/m/n/10.95   \OML/cmm/m/it/10.95 T[]\OT
+1/cmr/m/n/10.95 )(\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 x[]\OMS/cmsy/m/n/10.
+95 g[]\OT1/cmr/m/n/10.95 ) =$
+ []
+
+[12] [13]
+Overfull \hbox (1.2901pt too wide) in paragraph at lines 660--662
+\C19/rm/m/n/10.95/64 $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 I \OMS/cmsy/m/n
+/10.95   \OML/cmm/m/it/10.95 A\OT1/cmr/m/n/10.95 )[]$\C19/rm/m/n/10.95/62 k \C1
+9/rm/m/n/10.95/46 .\OT1/cmr/m/n/10.95 . \C19/rm/m/n/10.95/62 q \C19/rm/m/n/10.9
+5/61 œ \C19/rm/m/n/10.95/54 e$\OML/cmm/m/it/10.95 y[] \OT1/cmr/m/n/10.95 = (\OM
+L/cmm/m/it/10.95 y[]; y[]; [] \OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2 \OML/c
+mm/m/it/10.95 `[]$\OT1/cmr/m/n/10.95 , \C19/rm/m/n/10.95/63 K$\OML/cmm/m/it/10.
+95 x \OT1/cmr/m/n/10.95 = (\OML/cmm/m/it/10.95 x[]; x[]; [] \OT1/cmr/m/n/10.95 
+) := ([]\OML/cmm/m/it/10.95 ; []; [] \OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 2
+$
+ []
+
+[14]
+Overfull \hbox (10.48065pt too wide) in paragraph at lines 702--703
 []\C19/rm/m/it/10.95/55 $\U/rsfs/m/n/10.95 B$\C19/rm/m/it/10.95/45 9 \C19/rm/m
 /it/10.95/52 Ÿ \C19/rm/m/it/10.95/56 ¶ \C19/rm/m/it/10.95/45 P \C19/rm/m/it/10.
 95/43 “ \C19/rm/m/it/10.95/57 ” \C19/rm/m/it/10.95/40 Ω \C19/rm/m/it/10.95/48 n
@@ -736,8 +781,8 @@ it/10.95/50 ≤$\OMS/cmsy/m/n/10.95 k\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 e\OT
 1/cmr/m/n/10.95 ]\OMS/cmsy/m/n/10.95 k \OT1/cmr/m/n/10.95 =$
  []
 
-[11] [12]
-Overfull \hbox (3.41432pt too wide) in paragraph at lines 618--619
+[15] [16]
+Overfull \hbox (6.21263pt too wide) in paragraph at lines 788--789
 []\C19/rm/m/it/10.95/55 $\U/rsfs/m/n/10.95 A$\C19/rm/m/it/10.95/55 ¥ \C19/rm/m
 /it/10.95/61 ò \C19/rm/m/it/10.95/42 á \C19/rm/m/it/10.95/46  \C19/rm/m/it/10.
 95/44 Ü \C19/rm/m/it/10.95/40 $\OML/cmm/m/it/10.95 C[]$\C19/rm/m/it/10.95/39 ì
@@ -745,19 +790,19 @@ Overfull \hbox (3.41432pt too wide) in paragraph at lines 618--619
 /it/10.95/52 Ÿ \C19/rm/m/it/10.95/39 ¸ \C19/rm/m/it/10.95/58 † \C19/rm/m/it/10.
 95/63  \C19/rm/m/it/10.95/58 è$\OML/cmm/m/it/10.95 e$\OT1/cmr/m/it/10.95 . \C1
 9/rm/m/it/10.95/54 e$\OMS/cmsy/m/n/10.95 8\OML/cmm/m/it/10.95 x \OMS/cmsy/m/n/1
-0.95 2 \U/rsfs/m/n/10.95 A$\OT1/cmr/m/it/10.95 .$\OML/cmm/m/it/10.95 x$\C19/rm/
-m/it/10.95/58 è\OT1/cmr/m/it/10.95 Hermite
+0.95 2 \U/rsfs/m/n/10.95 A$\OT1/cmr/m/it/10.95 .$\OML/cmm/m/it/10.95 x$ \C19/rm
+/m/it/10.95/58 è\OT1/cmr/m/it/10.95 Hermite
  []
 
-[13] [14]
+[17] [18]
 (C:\ÊàëÁöÑÂ∏àÂ§ß‰∫ëÁõò\2Â≠¶‰π†ÊñáÊ°£\2017-2018A\Ê≥õÂáΩ‰Ωú‰∏ö\Ê≥õÂáΩ‰π†È¢ò\Ê≥õÂá
 ΩÂàÜÊûê‰π†È¢òËß£Á≠î.aux) ) 
 Here is how much of TeX's memory you used:
- 12553 strings out of 495354
- 196162 string characters out of 3183858
- 244380 words of memory out of 3000000
- 15388 multiletter control sequences out of 15000+200000
- 50529 words of font info for 177 fonts, out of 3000000 for 9000
+ 12589 strings out of 495354
+ 196823 string characters out of 3183858
+ 245380 words of memory out of 3000000
+ 15424 multiletter control sequences out of 15000+200000
+ 52615 words of font info for 184 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  36i,13n,35p,926b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei
@@ -806,9 +851,9 @@ pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/CTEX/MiKTeX/f
 onts/type1/public/amsfonts/euler/eufm10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb><C:/CTEX/MiKTeX/fonts/type1/hoekwater/rsfs/rsfs10.p
 fb><C:/CTEX/MiKTeX/fonts/type1/hoekwater/rsfs/rsfs5.pfb>
-Output written on Ê≥õÂáΩÂàÜÊûê‰π†È¢òËß£Á≠î.pdf (14 pages, 648393 bytes).
+Output written on Ê≥õÂáΩÂàÜÊûê‰π†È¢òËß£Á≠î.pdf (18 pages, 675553 bytes).
 PDF statistics:
- 468 PDF objects out of 1000 (max. 8388607)
+ 480 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
