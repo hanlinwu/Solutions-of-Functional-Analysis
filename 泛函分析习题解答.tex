@@ -1,21 +1,16 @@
-\documentclass[a4paper,11pt,space]{article}
+\documentclass[a4paper,11pt,space,oneside]{book}
 \usepackage{ctexcap,geometry,amsmath,listings,tabularx,xcolor,graphicx,multirow,enumerate,amssymb,amscd,extarrows,mathrsfs,rotating}
 \pagestyle{plain}
 \title{《泛函分析选讲》习题参考解答}
 \author{吴瀚霖 hlwu.bnu@gmail.com}
 \date{\today}
-\newtheorem{exercise}{习题}[subsection]
-\newcommand{\var}{\text{var}}
-\newcommand{\p}{\mathbb P}
-\newcommand{\e}{\mathbb E}
+\newtheorem{exercise}{习题}[section]
 \renewcommand{\exp}[1]{\text e^{#1}}
 \newcommand{\h}{\mathscr}
 \newcommand{\kx}{\mathbb}
 \newcommand{\mycap}[2]{\mathop{\cap}\limits_{#1}^{#2}}
 \newcommand{\mycup}[2]{\mathop{\cup}\limits_{#1}^{#2}}
 \numberwithin{equation}{section}
-\newcommand{\io}{\text{i.o.}}
-\renewcommand{\ae}{\text{a.e.}}
 \newcommand{\lx}{\mathscr L (\mathscr X)}
 \newcommand{\xlim}[1]{\mathop{\lim}\limits_{#1}} %显示角色
 \def\QEDopen{{\setlength{\fboxsep}{0pt}\setlength{\fboxrule}{0.2pt}\fbox{\rule[0pt]{0pt}{1.3ex}\rule[0pt]{1.3ex}{0pt}}}} %定义空心符
@@ -24,10 +19,32 @@
 \def\endproof{\hspace*{\fill}~\QED\par\endtrivlist\unskip}
 %\geometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm}
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 \begin{document}
-  \maketitle
-  \section{紧算子的谱理论}
-  \subsection{有界线性算子的谱}
+  \begin{titlepage}
+\begin{center}
+
+% Title
+\ \vspace{2cm}
+
+\HRule \\[1cm]
+{ \Huge \bfseries 《泛函分析选讲》}\\[0.4em] \huge{习题参考解答}\\[0.3em]
+\HRule \\[2cm]
+
+\includegraphics[width=0.4\textwidth]{pics/fm.jpg}
+% Author and supervisor
+
+\vfill
+
+% Bottom of the page
+{\large 吴瀚霖 \\
+ \today}
+
+\end{center}
+  \end{titlepage}
+  \tableofcontents
+  \chapter{紧算子的谱理论}
+  \section{有界线性算子的谱}
   \begin{exercise}
     设 $\h X$ 是一个有限维 Banach 空间，$A: \h X \rightarrow \h X$ 为有界线性算子。 则对于任意 $\lambda \in \mathbb C$, $\lambda$ 必为$A$的正则值或特征值之一.
   \end{exercise}
@@ -223,7 +240,7 @@
       \[
       \|\sum_{n=N}^{N+k}A^n\|_{\h L(\h X)}\leq\sum_{n=N}^{N+k}\|A\|^n_{\h L(\h X)}\xrightarrow{\|A\|_{\h L(\h X)}<1} 0, N\rightarrow\infty.
       \]
-      故$\{\sum_{n=0}^{N}A^n\}_{N\in\kx N}$为$\h L(\h X)$中的基本列. 而$\h L(\h X)$为Banach空间, 故此基本列收敛, 设其极限为$\sum_{n=0}^{\infty}A^n$. 由此, 有
+      故$\{\sum_{n=0}^{N}A^n\}_{N\in\kx N}$为$\h L(\h X)$中的基本列. 而$\h L(\h X)$ 为Banach空间, 故此基本列收敛, 设其极限为$\sum_{n=0}^{\infty}A^n$. 由此, 有
       \[
       \begin{aligned}
         \|\sum_{n=0}^{\infty}A^n\|_{\h L(\h X)}&\leq\|\sum_{n=0}^{\infty}A^n-\sum_{n=0}^{N}A^n\|_{\h L(\h X)}+\|\sum_{n=0}^{N}A^n\|_{\h L(\h X)}\\
@@ -238,7 +255,7 @@
       \]
       故$\{\sum_{n=0}^{N}A^nx\}_{N\in\kx N}$为$\h X$中的基本列. 由$\h X$的完备性知其有极限, 记其极限为$\sum_{n=0}^{\infty}A^nx$. $\|y-y_k\|_{\h X}=\|\sum_{n=k+1}^{\infty}A^nx\|\rightarrow 0,k\rightarrow\infty$.
 
-      (2) $\forall y\in\h X$. 由压缩映射原理知, 存在唯一的$x_y\in\h X$. 使得$Sx_y=x_y$. 即$y=(I-A)^{-1}x_y$. 令$\widetilde x=\lim_{n\rightarrow\infty}S^n y$. 又由$S^ny=\sum_{k=0}^{n}A^ky$及(1.1.2)式知$\widetilde x\in\h X$.
+      (2) $\forall y\in\h X$. 由压缩映射原理知, 存在唯一的$x_y\in\h X$. 使得$Sx_y=x_y$. 即$y=(I-A)^{-1}x_y$. 令$\widetilde x=\lim_{n\rightarrow\infty}S^n y$. 又由$S^ny=\sum_{k=0}^{n}A^ky$及(1.1.2) 式知$\widetilde x\in\h X$.
 
       因$S$连续, 则$S\widetilde x=S(\lim_{n\rightarrow\infty}S^ny)=\lim_{n\rightarrow\infty}S^{n+1}y=\widetilde x$. 由压缩映射原理的唯一性知, $\widetilde x=x_y$, 即
       \[
@@ -273,7 +290,7 @@
     若$\lambda\in\rho(A^{-1})\backslash\{0\}$, 同上可证$\lambda^{-1}\in\rho((A^{-1})^{-1})=\rho(A)$. 故\[\rho(A^{-1})\subset\{\lambda^{-1}:\lambda\in\rho(A)\backslash\{0\}\}\cup\{0\}.\]
     从而$\sigma(A^{-1})=\{\lambda^{-1}:\lambda\in\sigma(A)\}$.
   \end{proof}
-  \subsection{紧算子}
+  \section{紧算子}
   \begin{exercise}
     设$\h X,\h Y$为Banach空间. $A:\h X\rightarrow\h Y$为线性算子. 证明以下三条等价:
     \begin{enumerate}[(1)]
@@ -283,7 +300,7 @@
     \end{enumerate}
   \end{exercise}
     \begin{proof}
-    (1)$\Rightarrow$(2) 因$A$为全连续算子. $\forall\{x_n\}_{n\in\kx N}\subset\h X$且$x_n\rightharpoonup\theta,n\rightarrow\theta$. 根据全连续算子的定义知$Ax_n\rightarrow A\theta, n\rightarrow\infty$. 又因$A$为线性算子, 知$A\theta=\theta$. 故$\{Ax_n\}_{n\in\kx N}$在$\h Y$中强收敛于$\theta$.
+    (1)$\Rightarrow$(2) 因$A$为全连续算子. $\forall\{x_n\}_{n\in\kx N}\subset\h X$ 且$x_n\rightharpoonup\theta,n\rightarrow\theta$. 根据全连续算子的定义知$Ax_n\rightarrow A\theta, n\rightarrow\infty$. 又因$A$ 为线性算子, 知$A\theta=\theta$. 故$\{Ax_n\}_{n\in\kx N}$在$\h Y$中强收敛于$\theta$.
 
     (2)$\Rightarrow$(3) 设$\forall x_n\rightharpoonup,n\rightarrow\infty$, 则$x_n-x_0\rightharpoonup\theta$. 由(2)知$A(x_n-x_0)\rightarrow\theta$, 于是$Ax_n\rightarrow Ax_0$.
 
@@ -317,7 +334,7 @@
     而 $\forall n\in\kx N$, $\|C_n\|_{\h L(\h X)}\leq 2M\|e_n\|^{-1}_{\h X}$. 故$\forall n\in\kx N$, $C_n\in\h X^*$.
 
     ($\Leftarrow$) 若$\forall n\in\kx N$, $C_n\in\h X^*$, 而 $\forall n\in\kx N,\ \exists M_n>0$, 使得$\|C_n\|_{\h L(\h X)}\leq M_n$.
-    由$\|x-S_n(x)\|\rightarrow 0,n\rightarrow\infty$. 故$\exists N_0>0$, 当$n>N_0$时,
+    由$\|x-S_n(x)\|\rightarrow 0,n\rightarrow\infty$. 故$\exists N_0>0$, 当$n>N_0$ 时,
     \begin{equation}\label{e1}
     \|S_n(x)\|\leq\|x\|_{\h X}+1.
     \end{equation}
@@ -337,7 +354,7 @@
   \begin{proof}
     若不然, $A\in \mathfrak C$且$A$有有界逆, 即$A^{-1}\in\h L(\h X)$. 由命题1.2.6(vi) 可知, $AA^{-1}=I\in\mathfrak C(\h X)$. $\forall B\in\h X$且$B$ 为有界集, $\overline{I(B)}$为$\h X$中的紧集. 从而$\overline B$为$\h X$中的紧集, 故$\overline{B}$自列紧.
 
-    $\forall\{x_n\}_{n\in\kx N}\subset B\subset \overline B$, 由$\overline B$ 是自列紧的知$\{x_n\}_{n\in\kx N}$有收敛子列, 故$B$是列紧的. 由《泛函分析(上册)》推论1.4.30: “$B^*$空间$\h X$是有穷维的, 当且仅当任意有界集是列紧的.” 可知$\h X$是有穷维的. 矛盾.
+    $\forall\{x_n\}_{n\in\kx N}\subset B\subset \overline B$, 由$\overline B$ 是自列紧的知$\{x_n\}_{n\in\kx N}$有收敛子列, 故$B$是列紧的. 由《泛函分析(上册)》推论1.4.30: “$B^*$空间$\h X$是有穷维的, 当且仅当任意有界集是列紧的.” 可知$\h X$ 是有穷维的. 矛盾.
   \end{proof}
   \begin{exercise}
     设$\h X$为Banach空间, $A\in\h L(\h X)$. 满足对$\forall x \in\h X$,
@@ -522,12 +539,12 @@
     \]
     则$\lim\limits_{m\rightarrow\infty}a_{m,m}=0$.
   \end{proof}
-  \subsection{紧算子的谱理论}
+  \section{紧算子的谱理论}
   \begin{exercise}
     举例说明Banach空间$\h X$及$A\in\mathfrak C(\h X)$, 但$0\notin\sigma(A)$.
   \end{exercise}
 
-  \noindent\textbf{解 }: 固定$n\in\kx N$, 取$\h X:=\kx R^n$. 定义$A:=I$. 对$\h X$中任意有界集$B$, $\overline{I(B)}=\overline{B}$为有界闭集. 由于有限维Banach空间中紧集$\Longleftrightarrow$有界闭集. 故$I$为紧算子. 又由于$I^{-1}=I\in\h L(\kx R^n)$. 故$0\notin\sigma(A)$.
+  \noindent\textbf{解 }: 固定$n\in\kx N$, 取$\h X:=\kx R^n$. 定义$A:=I$. 对$\h X$ 中任意有界集$B$, $\overline{I(B)}=\overline{B}$为有界闭集. 由于有限维Banach空间中紧集$\Longleftrightarrow$有界闭集. 故$I$为紧算子. 又由于$I^{-1}=I\in\h L(\kx R^n)$. 故$0\notin\sigma(A)$.
 
   \begin{exercise}
     举例说明注记1.3.4情形(i)中的连续谱, 情形(ii)中的连续谱, 剩余谱, 情形(iii) 中的剩余谱.
@@ -570,7 +587,7 @@
   \]
   由此及$\{x_n\}_{n\in\kx Z}\in\ell^2(\kx Z)$有$x_0=0\Longrightarrow\{x_n\}_{n\in\kx Z}=\theta$. 即$\sigma(T_1)=\{0\}$.
 
-  再证$\{0\}=\sigma_c(T_1)$. 注意到若$\{x_n\}_{n\in\kx Z}\in\ell^2(\kx Z)$满足$T_1(\{x_n\}_{n\in\kx Z})=\theta$. 则对$\forall n\in\kx Z,\lambda_{|n|}x_n=0\Rightarrow x_n=0$. 所以$\{x_n\}_{n\in\kx Z}=\theta$. 即$0\notin\sigma_p(T_1)$且$T_1$为单射, 因此$T_1^{-1}$存在. 又因为$\{e_n\}_{n\in\kx Z}\subset R(T_1)$且$\{e_n\}_{n\in\kx Z}$为$\ell^2(\kx Z)$ 的一组Schauder基. 故$\overline{R(T_1)}=\ell^2(\kx Z)$. 因此$\{0\}=\sigma_c(T_1)$. 即$T_1$满足要求.
+  再证$\{0\}=\sigma_c(T_1)$. 注意到若$\{x_n\}_{n\in\kx Z}\in\ell^2(\kx Z)$ 满足$T_1(\{x_n\}_{n\in\kx Z})=\theta$. 则对$\forall n\in\kx Z,\lambda_{|n|}x_n=0\Rightarrow x_n=0$. 所以$\{x_n\}_{n\in\kx Z}=\theta$. 即$0\notin\sigma_p(T_1)$且$T_1$为单射, 因此$T_1^{-1}$存在. 又因为$\{e_n\}_{n\in\kx Z}\subset R(T_1)$且$\{e_n\}_{n\in\kx Z}$为$\ell^2(\kx Z)$ 的一组Schauder基. 故$\overline{R(T_1)}=\ell^2(\kx Z)$. 因此$\{0\}=\sigma_c(T_1)$. 即$T_1$满足要求.
 
   (ii)-(a)(连续谱) 令$\ell^2(\kx Z), T_1$如(i)中. 给定$m\in\kx N$与$\{\lambda_1\}_{i=1}^m\subset\kx C$. 定义
   \[
@@ -590,7 +607,7 @@
   \end{aligned}
   \right.
   \]
-  且对$\forall x\oplus y\in\kx C^m + \ell^2(\kx Z), \|x+y\|_{\kx C^m\oplus\ell^2(\kx Z)}:=\|x\|_{\kx C^m}+\|y\|_{\ell^2(\kx Z)}$. 则$A_1$为紧算子且$\sigma(A_1)=\sigma_c(A_1)\cup\sigma_p(A_1)$. 其中$\sigma_c(A_1)=\{0\}, \sigma_p(A_1)=\{\lambda_i\}_{i=1}^m$.
+  且对$\forall x\oplus y\in\kx C^m + \ell^2(\kx Z), \|x+y\|_{\kx C^m\oplus\ell^2(\kx Z)}:=\|x\|_{\kx C^m}+\|y\|_{\ell^2(\kx Z)}$. 则$A_1$ 为紧算子且$\sigma(A_1)=\sigma_c(A_1)\cup\sigma_p(A_1)$. 其中$\sigma_c(A_1)=\{0\}, \sigma_p(A_1)=\{\lambda_i\}_{i=1}^m$.
 
   (ii)-(b)(剩余谱) 令$T_2$如(a)中所示, 给定$\{\mu_i\}_{i=1}^{\infty}\subset\kx C, \mu_i\neq 0. \forall i\in\kx N$且$\mu_i\rightarrow 0, i\rightarrow \infty$. 定义
   \[
@@ -648,18 +665,84 @@
     \]
     于是$\|A\|\leq\sup_{i\in\kx N}|a_i|<\infty$. 故$A\in\h L(\ell^2)$.
 
-    (2) 取$\lambda :=a_i$, 和$e_i=(0,0,\cdots,0,1,0,\cdots),i\in\kx N$. 因$(\lambda I-A)e_i=\theta$. 故$\lambda\in\sigma_p(A)\subset\sigma(A)$. 又由$A$有界及推论1.1.11知$\sigma(A)$闭. 故$\overline{\{a_i:i\in\kx N\}}\subset\sigma(A)$. 
-    
-    下证$\sigma(A)\subset\overline{\{a_i:i\in\kx N\}}$, 为此只需证明$\forall \lambda\in\overline{\{a_i:i\in\kx N\}}$, 有$\lambda\notin\sigma(A)$. 事实上, 对$\forall\lambda\notin\overline{\{a_i:i\in\kx N\}}$与$x\in\ell^2$满足
+    (2) 取$\lambda :=a_i$, 和$e_i=(0,0,\cdots,0,1,0,\cdots),i\in\kx N$. 因$(\lambda I-A)e_i=\theta$. 故$\lambda\in\sigma_p(A)\subset\sigma(A)$. 又由$A$ 有界及推论1.1.11 知$\sigma(A)$ 闭. 故$\overline{\{a_i:i\in\kx N\}}\subset\sigma(A)$.
+
+    下证$\sigma(A)\subset\overline{\{a_i:i\in\kx N\}}$, 为此只需证明$\forall \lambda\in\overline{\{a_i:i\in\kx N\}}$, 有$\lambda\notin\sigma(A)$. 事实上, 对$\forall\lambda\notin\overline{\{a_i:i\in\kx N\}}$与$x\in\ell^2$ 满足
     \[
     (\lambda I-A)(x_1,x_2,\cdots)=((\lambda-a_1)x_1,(\lambda-a_2)x_2,\cdots)=\theta.
     \]
-    有$x_i=0,\forall i\in\kx N$, 即$x=\theta$. 故$(\lambda I-A)$为单射, 即$(\lambda I-A)^{-1}$存在. 注意到对$\forall \lambda\notin\overline{\{a_i:i\in\kx N\}}$, 存在正常数$c$, 使得对$\forall i\in\kx N$, 有$|\lambda-a_i|>c$. 由此及$(\lambda I-A)^{-1}$存在且对$\forall x\in\ell^2$, 
+    有$x_i=0,\forall i\in\kx N$, 即$x=\theta$. 故$(\lambda I-A)$为单射, 即$(\lambda I-A)^{-1}$存在. 注意到对$\forall \lambda\notin\overline{\{a_i:i\in\kx N\}}$, 存在正常数$c$, 使得对$\forall i\in\kx N$, 有$|\lambda-a_i|>c$. 由此及$(\lambda I-A)^{-1}$存在且对$\forall x\in\ell^2$,
     \[
     (\lambda I-A)^{-1}(x_1,x_2,\cdots)=(\frac{1}{\lambda-a_1}x_1,\frac{1}{\lambda-a_2}x_2,\cdots)
     \]
     知$(\lambda I-A)^{-1}$有界. 又因若$y_i=(y_1,y_2,\cdots)\in\ell^2$, 则$x=(x_1,x_2,\cdots):=(\frac{y_1}{\lambda-a_1},\frac{y_2}{\lambda-a_2},\cdots)\in\ell^2$, 且$(\lambda I-A)x=y$. 即$R(\lambda I-A)=\ell^2$. 故$(\lambda I-A)^{-1}\in\h L(\ell^2)$. 因此$\lambda\in\sigma(A)$. 从而有$\sigma(A)\subset\overline{\{a_i:i\in\kx N\}}$. 综上得$\sigma(A)=\overline{\{a_i:i\in\kx N\}}$.
   \end{proof}
+  \begin{exercise}
+    在$C[0,1]$中考虑映射$T:x(t)\rightarrow\int_0^t x(s)ds, \forall x\in C[0,1]$. 证明
+    \begin{enumerate}[(i)]
+      \item $T$是紧算子.
+      \item 求$\sigma(T)$及$T$的一个非平凡的闭的不变子空间.
+    \end{enumerate}
+    \end{exercise}
+    \begin{proof}
+      (i) 定义
+      \[
+      k(s,t)=\left\{
+      \begin{aligned}
+        &1,0\leq s\leq t\leq 1\\
+        &0, 0\leq t< s\leq 1
+      \end{aligned}
+      \right., \]
+      则$k(s,t)\in L^2([0,1]\times[0,1])$. 且对$\forall x\in C[0,1]$和$t\in [0,1]$,
+       \[
+      Tx(t)=\int_0^t x(s)ds=\int_0^1 k(s,t)x(s)ds.
+      \]
+      由于$C([0,1]\times[0,1])$ 在$L^2([0,1]\times[0,1])$中稠, 故$\exists \{k_n\}_{n\in\kx N}\subset C([0,1]\times[0,1])$. 使得$k_n\rightarrow k \ \text{in}\ L^2([0,1]\times[0,1])$. 注意到对$\forall x\in C([0,1])$与$t\in [0,1]$. 类似于例1.2.17可证
+      \[
+      T_Nx(t):=\int_0^1 k_n(s,t)x(s)ds
+      \]
+      为紧算子. 且有Holder不等式知
+      \[
+      \begin{aligned}
+        \|T_Nx-Tx\|_{L^2}
+        &=\left\{\int_0^1\left|\int_0^1[k_n(s,t)-k(s,t)]x(s)ds\right|^2dt\right\}^{1/2}\\
+        &\leq\left\{\int_0^1\left[\int_0^1|k_n(s,t)-k(s,t)|^2\right]
+        \left[\int_0^1|x(s)|^2ds\right]dt
+        \right\}^{1/2}\\
+        &\leq \|x\|\|k_n-k\|_{L^2([0,1]\times[0,1])}.
+      \end{aligned}
+      \]
+      所以
+      \[
+      \|T_n-T\|\leq \|k_n-k\|_{L^2([0,1]\times[0,1])}\rightarrow 0,n\rightarrow\infty.
+      \]
+      由此及命题1.2.6(iii)知$T$为紧算子.
+
+      (ii) 由$T$紧及定理1.3.1(i)知$0\in\sigma(T)$. 下证$\sigma(T)=\{0\}$. 为此只需证明$r_\sigma(T)=\lim\limits_{n\rightarrow\infty}\|T_n\|^{1/n}=0$. 事实上, 注意到对$\forall x\in C[0,1]$与$t\in [0,1]$. 有
+      \[
+      \begin{aligned}
+        Tx(t)&=\int_0^t x(s)ds\\
+        T^2x(t)&=\int_0^t\int_0^u x(s)dsdu=\int_0^t(t-s)x(s)ds.
+      \end{aligned}
+      \]
+      由此及数学归纳法知, 对$\forall n\in\kx N$,
+      \[
+      T^n x(t)=\frac{1}{(n-1)!}\int_0^t(t-s)^{n-1}x(s)ds.
+      \]
+      故
+      \[
+      \|T^nx\|\leq\frac{1}{(n-1)!}\max_{t\in [0,1]}\left|\int_0^t(t-s)^{n-1}x(s)ds\right|\leq\frac{1}{n!}\|x\|.
+      \]
+      于是$\|T^n\|\leq\frac{1}{n!}$. 故$\lim\limits_{n\rightarrow\infty}\|T^n\|^{1/n}=0$, 因此$\sigma(T)=\{0\}$.
+
+      下面说明$T$存在非平凡不变子空间, 为此只需证$\{0\}=\sigma_r(T)$. 事实上, 由$T$ 的定义与微积分基本定理知$R(T)=\{y\in C^1[0,1]:y(0)=0\}$. 注意到若$Tx=\theta$. 则$x=\theta$. 故$T$ 为单射, 即$T^{-1}$存在. 由此及$x\equiv 1\in C[0,1]$, 但$1\notin\overline{R(T)}$知$0\in\sigma_r(T)$. 故$T$存在非平凡的不变子空间.
+
+      令$\Omega:=\{y\in C[0,1]:y(0)=0\}$. $\Omega$即为一个非平凡的不变子空间. 下证$\Omega$闭. $\forall \{x_n\}\subset\Omega$且$x_n\rightarrow x\ \text{in}\ C[0,1]$.
+      \[
+      |x(0)|=|x(0)-x_n(0)|\leq\|x-x_n\|\rightarrow 0, n\rightarrow\infty.
+      \]
+      于是$x(0)=0$. 即$x\in\Omega$, 故$\Omega$闭.
+    \end{proof}
   \begin{exercise}[补充题]
   给定数列$\{a_n\}_{n=1}^\infty$, 定义$A: \left\{
   \begin{aligned}
@@ -673,9 +756,87 @@
   \item$A^{-1}\in\h L(\ell^1)\Longleftrightarrow \inf\limits_{n\in\kx N}|a_n|>0$.
   \item$A\in\mathfrak C(\ell^1)\Longleftrightarrow\lim\limits_{n\rightarrow\infty}a_n=0.$
   \end{enumerate}
+    \end{exercise}
+  \begin{proof}
+    (1) 同习题1.2.2(i).
+
+    (2) ($\Rightarrow$) 若$A^{-1}\in\h L(\ell^1)$, 则$\exists M\in(0,\infty)$. 使得$\forall x\in\ell^1,\|Ax\|_{\ell^1}\geq M\|x\|_{\ell^1}$. 取$e_n:=(0,0,\cdots,0,1,0,\cdots),\forall n\in\kx N$. 则有$|a_n|=\|Ae_n\|_{\ell^1}\geq M\|e_n\|_{\ell^1}=m$. 于是$\inf\limits_{n\in\kx N}|a_n|>0$.
+
+    ($\Leftarrow$) 若$\inf\limits_{n\in\kx N}|a_n|>0$, 则对$\forall n\in\kx N$, 有$|a_n|>0$, 定义
+    \[
+    B:\left\{
+    \begin{aligned}
+      \ell^1&\rightarrow\ell^1\\
+      (x_1,x_2,\cdots)&\mapsto(a_1^{-1}x_1,a_2^{-1}x_2,\cdots)
+    \end{aligned},
+    \right.
+    \]
+    则$AB=BA=I$. 故$A^{-1}=B$. 由(1)知,
+    \[\|A^{-1}\|_{\h L(\ell^1)}=\|B\|_{\h L(\ell^1)}\leq\sup_{n\in\kx N}|a_n^{-1}|=\frac{1}{\inf_{n\in\kx N}|a_n|}<\infty.
+    \] 故$A^{-1}\in\h L(\ell^1)$.
+
+    (3) ($\Leftarrow$) 同习题1.2.5.
+
+    ($\Rightarrow$) 反证法. 若$\lim\limits_{n\rightarrow\infty}a_n\neq 0$, 则$\exists \varepsilon_0>0$, 及$\{a_n\}_{n\in\kx N}$的子列$\{a_{n_k}\}_{k\in\kx N}$. 使得对于$\forall k\in\kx N, |a_{n_k}|\geq\varepsilon_0>0$, 取$e_{n_k}:=(0,0,\cdots,0,1,0,\cdots)$. 则$\{a_{n_k}\}_{k\in\kx N}$为$\ell^1$中有界列, 但对于$\forall l\in\kx N, \|Ae_k-Ae_{n_{k_l}}\|_{\ell^1}=|a_{n_k}|+|a_{k_l}|\geq 2\varepsilon_0>0$. 即$\{Ae_{n_k}\}_{k\in\kx N}$没有收敛子列. 从而$A\notin\h L(\ell^1)$, 矛盾.
+  \end{proof}
+
+  \section{Hilbert-Schmidt 定理}
+  \begin{exercise}
+    设$H$为复Hilbert空间, 且$A$为$H$上的有界线性算子. 证明$A+A^*,AA^*,A^*A$均为对称算子, 且
+    \[
+    \|A^*A\|_{\h L(H)}=\|A^*A\|_{\h L(H)}=\|A\|^2_{\h L(H)}.
+    \]
   \end{exercise}
-  \subsection{Hilbert-Schmidt 定理}
-  \begin{exercise}[原第3题]
+  \begin{proof}
+    (i) ①
+    \[
+    \begin{aligned}
+      ((A+A^*)x,y)&=(Ax,y)+(A^*x,y)\\
+      &=(x,A^*y)+(x,Ay)\\
+      &=(x,(A+A^*)y).
+    \end{aligned}
+    \]
+    所以$A+A^*$是对称算子.
+
+    ② $(AA^*x,y)=(A^*x,A^*y)=(x,AA^*y)$. 所以$AA^*$是对称算子.
+
+    ③ $(A^*Ax,y)=(Ax,Ay)=(x,A^*Ay)$. 所以$A^*A$是对称算子.
+
+    (2) 因为$(AA^*x,x)=(A^*x,A^*x)=\|A^*x\|_{H}^2$. 所以
+    \[
+    \|AA^*\|_{\h L(H)}=\sup_{\|x\|_H=1}|(AA^*x,x)|=\sup_{\|x\|_H=1}\|A^*x\|_H^2=\|A^*\|_{\h L(H)}^2.
+    \]
+    同理
+    \[
+    \|A^*A\|_{\h L(H)}=\sup_{\|x\|_H=1}|(A^*Ax,x)|=\sup_{\|x\|_H=1}\|Ax\|_H^2=\|A\|_{\h L(h)}^2.
+    \]
+    又因$\|A^*\|_{\h L(H)}=\|A\|_{\h L(H)}$, 故$\|AA^*\|_{\h L(H)}=\|A^*A\|_{\h L(H)}=\|A\|_{\h L(H)^2}$.
+  \end{proof}
+  \begin{exercise}
+    设$H$为复Hilbert空间, 且$A$为$H$上的有界线性算子, 满足$(Ax,x)\geq 0,\forall x\in H$, 且$(Ax,x)=0\Leftrightarrow x=\theta$. 证明
+    \[
+    \|Ax\|_H^2\leq \|A\|_{\h L(H)}(Ax,x),\forall x\in H.
+    \]
+  \end{exercise}
+  \begin{proof}
+    设$a(x,y)=(Ax,y)$, 则$a(\cdot,\cdot)$为$H\times H\rightarrow \kx K$上的共轭双线性函数, 由《泛函分析（上册）》命题1.6.9有
+    \[
+    |a(x,y)|\leq [a(x,x)a(y,y)]^{1/2}, \forall x,y\in H.
+    \]
+    那么
+    \[
+    |(Ax,y)|^2\leq(Ax,x)(Ay,y).
+    \]
+    在上式中, 令$y=Ax$, 则
+    \[
+    \begin{aligned}
+      \|Ax\|_H^4&\leq (Ax,x)(A^2x,Ax)\\
+      &\leq (Ax,x)\|A^2x\|_H \|Ax\|_H.
+    \end{aligned}
+    \]
+    所以$\|Ax\|_H^4\leq \|A\|_{\h L(H)}\|Ax\|_H^2$. 即得$\|Ax\|_H^4\leq \|A\|_{\h L(H)}(Ax,x)$.
+  \end{proof}
+  \begin{exercise}
     设$H$为复Hilbert空间, 且$A$为$H$上的对称紧算子. 令
     \[
     m(A):=\inf_{\|x\|_H=1}(Ax,x),\ M(A):=\sup_{\|x\|_H=1}(Ax,x).
@@ -686,15 +847,93 @@
       \item 若$M(A)\neq0$, 则$M(A)\in\sigma_p(A)$.
     \end{enumerate}
   \end{exercise}
-  \begin{exercise}[原第5题]
+  \begin{proof}
+    (1) 因$A$为紧算子, 则$\sigma(A)\backslash\{0\}=\sigma_p(A)\backslash\{0\}$. 从而为证$m(A)\in\sigma_p(A)$, 只需证$m(A)\in\sigma(A)$. 令$B:=A-m(A)I$, 则$B\in\h L(H)$, 且对$\forall x, \|x\|_H=1$, 有$(Bx,x)=(Ax,x)-m(A)\geq 0$. 从而对$\forall x\in H, (Bx,x)\geq 0$. 从而对$\forall t\in R$及$\|x\|_H=1$,
+    \[
+    0\leq (B(tBx+x),tBx+x)=t^2(B^2x,Bx)+2t\|Bx\|_H+(Bx,x).
+    \]
+    于是$4\|Bx\|_H^4\leq 4\|B\|^3_H(Bx,x)$. 取$\inf\limits_{\|x\|_H=1}=0$, 若$m(A)\notin \sigma(A)$, 则$m(A)\in\rho(A)$. 从而$B^{-1}\in \h L(H)$. 取$\{x_n\}_{n\in\kx N}\subset\{x\in H:\|x\|_H=1\}$使得$\|Bx_n\|\rightarrow 0,n\rightarrow\infty$, 则
+    \[
+    1=\|x_n\|=\|B^{-1}Bx_n\|\leq\|B^{-1}\|\|Bx_n\|\rightarrow 0.
+    \]
+    矛盾. 故$m(A)\in\sigma(A)$.
+
+    (2) 记$B:=-A$, 则
+    \[
+    m(B)=\inf\limits_{\|x\|_H=1}(Bx,x)=\inf_{\|x\|_H=1}(-Ax,x)=-\sup_{\|x\|_H=1}(Ax,x)=-M(A).
+    \]
+    由(1)知$m(B)\in\sigma_p(B)$, 从而$-M(A)\in\sigma_p(-A)$. 故$M(A)\in\sigma_p(A)$.
+  \end{proof}
+
+  \begin{exercise}
+    设$H$为复Hilbert空间, 且$A$为$H$上的对称紧算子. 证明
+    \begin{enumerate}[(1)]
+      \item 若$A$非零, 则$A$至少有一个非零本征值.
+      \item 若$M$是$A$的非零闭不变子空间, 则$M$上必含有$A$的本征值.
+    \end{enumerate}
+  \end{exercise}
+  \begin{proof}
+    (1) 由定理1.4.6知, $\exists x_0\in H, \|x_0\|_H=1$使得
+    \[
+    |(Ax_0,x_0)|=\sup_{\|x\|_H=1}(Ax,x)=\|A\|_{\h L(H)},
+    \]
+    且$Ax_0=(Ax_0,x_0)x_0$. 因为$A$非零, $\|x_0\|_H=1$, 故$(Ax_0,x_0)\neq 0$, 且$(Ax_0,x_0)$位$A$的非零本征值.
+
+    (2) 由命题1.4.5(ii)及命题1.2.6(iv)知, $A|_M$还是对称紧算子.
+
+    若$A|_M=\theta$, 则$0\in\sigma_p(A|_M)$. 事实上, $\forall\theta\neq x_0\in M$, $A|_Mx_0=0=x_0$.
+
+    若$A|_M\neq 0$, 同(1)中的结果, $\exists x_0\in M, \|x_0\|_H=1$. 使得$A|_Mx_0=(A|_Mx_0,x_0)x_0$.
+
+    于是$(A|_Mx_0,x_0)$为$A|_M$的本征值.
+  \end{proof}
+
+  \begin{exercise}
     设$H$为复Hilbert空间. 则$P\in\h L(H)$为$H$上的正交投影算子当且仅当
     \[
     (Px,x)=\|Px\|_H^2,\ \forall x\in H.
     \]
   \end{exercise}
+  \begin{proof}
+    ($\Rightarrow$) 因$P\in\h L(H)$是$H$的正交投影算子. 设$M$是一个闭的线性子空间. 由正交分解定理, 对$\forall x,y\in H$, 有
+    \[
+    \begin{aligned}
+    x&=x_M+x_{M^\bot},\  (x_M\in M, x_{M^\bot}\in M^\bot)\\
+    y&=y_M+y_{M^\bot}.\  (y_M\in M, y_{M^\bot}\in M^{\bot})
+    \end{aligned}
+    \]
+    有$P$的定义知, $x_M=Px,y_M=Py$. 故
+    \[
+    (Px,y)=(x_M,y_M+y_{M^\bot})=(x_m,y_m)=(x,Py).
+    \]
+    所以$P$对称. 因此$(P^2x,x)=(Px,Px)=\|Px\|_{H^2}$. 又因$P^2=P$, 故$(Px,x)=\|Px\|_H^2$.
+
+    ($\Leftarrow$) 因$(Px,x)=\|Px\|_H^2\in\kx R$, 故$P$是对称算子(由命题1.4.5(i)). 又因
+    \[
+    (Px,x)=\|Px\|_H^2=(Px,Px)=(P^2x,x),
+    \]
+    所以$((P-P^2)x,x)=0,\forall x\in H$. 再由《泛函分析(上册)》习题1.6.1中的极化恒等式, 有
+    \[
+    ((P-P^2)x,y)=0,\forall x,y\in H.
+    \]
+    所以$P=P^2$.
+
+    令$M=P(H)$, 可知$M$闭. 事实上, 设$\{x_n\}_{n\in\kx N}\subset M$, 且有$Px_n\rightarrow y,\ P^2x_n=Px_n\rightarrow Py$. 所以$P=Py\in M$. 故$M$是闭的. 下证$P$是正交投影算子. 对$\forall x\in H$, 有$x=Px+(I-P)x, Px\in M$. 又因$\forall y\in H$,
+    \[
+    ((I-P)x,Py)=(x,Py)-(Px,Py)=(x,Py)-(x,P^2y)=0.
+    \]
+    从而$(I-P)x\in M^\bot$, 即$P$为$H\rightarrow M$的正交投影算子.
+  \end{proof}
+  \chapter{Banach 代数}
+  \section{代数准备知识}
+  \begin{exercise}
+    在注记2.1.8中, 若$\h A$为一个Banach代数, 并在$\hat {\h A}$上赋予范数
+    \[
+    \|(x,\alpha):=\|x\|+|\alpha|\|.
+    \]
+    证明$\hat {\h A}$是一个Banach代数.
+  \end{exercise}
   \section{Banach 代数}
-  \subsection{代数准备知识}
-  \subsection{Banach 代数}
   \begin{exercise}
     证明例2.2.6中$\h A$完备.
   \end{exercise}
@@ -719,7 +958,7 @@
     略
   \end{exercise}
   \begin{exercise}
-    用定理1.1.14即“有界线性算子$A,\ \sigma(A)\neq\varnothing$”来证明定理2.2.10即“可除Banach代数$\h A$等距同构与$\kx C$”.
+    用定理1.1.14即“有界线性算子$A,\ \sigma(A)\neq\varnothing$”来证明定理2.2.10 即“可除Banach代数$\h A$等距同构与$\kx C$”.
   \end{exercise}
   \begin{exercise}
     证明以下两条等价.
@@ -729,7 +968,7 @@
     \end{enumerate}
   \end{exercise}
   \begin{exercise}
-    证明引理2.2.16证明中的$\widetilde{\varphi}$ 是$\h A/J\rightarrow\kx C$上的等距同构映射.
+    证明引理2.2.16证明中的$\widetilde{\varphi}$ 是$\h A/J\rightarrow\kx C$ 上的等距同构映射.
     \[
     \widetilde{\varphi}:\left\{
     \begin{aligned}
@@ -740,12 +979,12 @@
     \]
   \end{exercise}
   \begin{exercise}
-    设$\h X$为线性赋范空间, 若$S$为$\h X^*$ 的$*$ 弱闭集且有界. 证明$S$是$*$ 弱紧的.
+    设$\h X$为线性赋范空间, 若$S$为$\h X^*$ 的$*$弱闭集且有界. 证明$S$是$*$弱紧的.
   \end{exercise}
   \begin{exercise}[补充题]
     设$\h A$是Banach代数, 则对$\forall x\in\h A$. 极限$\lim\limits_{n\rightarrow\infty}\sqrt[n]{\|x^n\|}$ 存在且等于$\inf\limits_{n\in\kx N}\sqrt[n]{\|x^n\|}.$
   \end{exercise}
-  \subsection{例子与应用}
+  \section{例子与应用}
   \begin{exercise}
     设
    $
@@ -769,7 +1008,7 @@
   \begin{exercise}[补充题]
     设$\h A$是半单的交换Banach代数. 证明: $\h A$ 的Gelfand表示的值域$\Gamma(\h A)$ 是$C(\mathfrak M)$的闭集的充要条件是存在正常数$k<\infty$, 使得对$\forall a\in \h A$, 有$\|a\|^2\leq k\|a^2\|$.
   \end{exercise}
-  \subsection{$C^*$代数}
+  \section{$C^*$代数}
   \begin{exercise}
     设所有记号如定理2.4.14的证明. 证明:
     \begin{enumerate}[(1)]
@@ -779,7 +1018,7 @@
     \end{enumerate}
   \end{exercise}
   \begin{exercise}
-    证明注记2.4.15. 即: $f\in C_\infty(\h X)\Longleftrightarrow f\in C(\h Y)_r$且$f(\partial)=0.$
+    证明注记2.4.15. 即: $f\in C_\infty(\h X)\Longleftrightarrow f\in C(\h Y)_r$ 且$f(\partial)=0.$
   \end{exercise}
   \begin{exercise}
     证明交换半单有单位元的Banach代数上的任意对合运算均连续.
@@ -791,7 +1030,7 @@
       \item$x\geq 0\Longleftrightarrow x$ 为Hermite元且$\|\|x\|e-x\|\leq\|x\|$.
     \end{enumerate}
   \end{exercise}
-  \subsection{Hilbert空间上的正常算子}
+  \section{Hilbert空间上的正常算子}
   \begin{exercise}
     见命题2.5.7.
   \end{exercise}
