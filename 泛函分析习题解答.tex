@@ -1,5 +1,5 @@
 \documentclass[a4paper,11pt,space,oneside]{book}
-\usepackage{ctexcap,geometry,amsmath,listings,tabularx,xcolor,graphicx,multirow,enumerate,amssymb,amscd,extarrows,mathrsfs,rotating}
+\usepackage{ctexcap,geometry,amsmath,listings,tabularx,xcolor,graphicx,multirow,enumerate,amssymb,amscd,extarrows,mathrsfs,rotating,verbatim}
 \pagestyle{plain}
 \title{《泛函分析选讲》习题参考解答}
 \author{吴瀚霖 hlwu.bnu@gmail.com}
@@ -27,8 +27,8 @@
 % Title
 \ \vspace{2cm}
 
-\HRule \\[1cm]
-{ \Huge \bfseries 《泛函分析选讲》}\\[0.4em] \huge{习题参考解答}\\[0.3em]
+%\HRule \\[1cm]
+{ \Huge \bfseries 《泛函分析选讲》}\\[0.4em] \huge{习题参考解答} \\[0.4em]
 \HRule \\[2cm]
 
 \includegraphics[width=0.4\textwidth]{pics/fm.jpg}
@@ -190,7 +190,7 @@
 
       类似可以证明$\langle u_n',\varphi\rangle\rightarrow\langle v,\varphi\rangle ,n\rightarrow\infty$. 即$\langle v,\varphi\rangle =-\langle u,\varphi'\rangle ,\forall\varphi\in C_c^\infty(\Omega)$ 成立. 由弱导数的定义知$u'=v\in L^2(\Omega)$. 从而$u\in H^1(\Omega)$, 且$u'=v$. 故$A$为闭算子.
 
-      再证$\sigma_p(A)=\{\lambda\in\kx C:Re\lambda>0\}$. 考虑方程$(\lambda I-A)u=0$, 即$u'-\lambda u=0$. 由PDE知系数光滑从而弱解也光滑. 解ODE, $u'-\lambda u=0$. 得$u=0$或$ce^{\lambda x}\in L^2(\Omega)$. 故$(\lambda I-A)^{-1}$不存在. $\lambda\in\sigma_p(A)$.
+      再证$\sigma_p(A)=\{\lambda\in\kx C:Re\lambda>0\}$. 考虑方程$(\lambda I-A)u=0$, 即$u'-\lambda u=0$. 由PDE知系数光滑从而弱解也光滑. 解ODE, $u'-\lambda u=0$. 得$u=0$ 或$ce^{\lambda x}\in L^2(\Omega)$. 故$(\lambda I-A)^{-1}$不存在. $\lambda\in\sigma_p(A)$.
 
       再证$\sigma_c(A)=\{\lambda\in\kx C:Re\lambda=0\}$. 先说明$R(\lambda I-A)\subsetneqq L^2(\Omega)$. 令$v(x):=\frac{e^{\lambda x}}{x+1}\in L^2(\Omega)$. 由$(\lambda I-A)u=v$得
       \[
@@ -213,10 +213,10 @@
       \]
       满足$u\in H^1(\Omega)$. 即$R(\lambda I-A)\supset C_c^\infty(\Omega)$. 故$\overline{\lambda I-A}=L^2(\Omega)$.
 
-      最后说明$\rho(A)\supset\{\lambda\in\kx C: Re\lambda>0\}$. 设$Re\lambda>0$, 此时$ce^{\lambda x}\notin L^2(\Omega)$. 从而$(\lambda I-A)^{-1}$存在. 断言$R(\lambda I-A)=L^2(\Omega)$. 事实上, 对$\forall v\in L^2(\Omega)$. 令$u(x)=e^{\lambda x}\int_0^\infty e^{\lambda t}v(t)dt=\int_0^\infty e^{-\lambda s}v(s+x)ds$. 则$u$满足$u'-\lambda u=v$ 且$u\in H^1(\Omega)$. 由Minkovski不等式, 有
+      最后说明$\rho(A)\supset\{\lambda\in\kx C: Re\lambda>0\}$. 设$Re\lambda>0$, 此时$ce^{\lambda x}\notin L^2(\Omega)$. 从而$(\lambda I-A)^{-1}$存在. 断言$R(\lambda I-A)=L^2(\Omega)$. 事实上, 对$\forall v\in L^2(\Omega)$. 令$u(x)=e^{\lambda x}\int_0^\infty e^{\lambda t}v(t)dt=\int_0^\infty e^{-\lambda s}v(s+x)ds$. 则$u$ 满足$u'-\lambda u=v$ 且$u\in H^1(\Omega)$. 由Minkovski不等式, 有
       \[
       \begin{aligned}
-        \|u\|_{L^2(\Omega)}&=\|\int_0^\infty e^{-\lambda x}v(s+x)ds\|_{L^2(\Omega)}\\
+        \|u\|_{L^2(\Omega)}&=\left\|\int_0^\infty e^{-\lambda x}v(s+x)ds\right\|_{L^2(\Omega)}\\
         &=\int_0^\infty|e^{-\lambda s}|ds\|v\|_{L^2(\Omega)}\\
         &=\frac{1}{Re\lambda}\|v\|_{L^2(\Omega)}\\
         &<\infty.
@@ -255,23 +255,23 @@
       \]
       故$\{\sum_{n=0}^{N}A^nx\}_{N\in\kx N}$为$\h X$中的基本列. 由$\h X$的完备性知其有极限, 记其极限为$\sum_{n=0}^{\infty}A^nx$. $\|y-y_k\|_{\h X}=\|\sum_{n=k+1}^{\infty}A^nx\|\rightarrow 0,k\rightarrow\infty$.
 
-      (2) $\forall y\in\h X$. 由压缩映射原理知, 存在唯一的$x_y\in\h X$. 使得$Sx_y=x_y$. 即$y=(I-A)^{-1}x_y$. 令$\widetilde x=\lim_{n\rightarrow\infty}S^n y$. 又由$S^ny=\sum_{k=0}^{n}A^ky$及(1.1.2) 式知$\widetilde x\in\h X$.
+      (2) $\forall y\in\h X$. 由压缩映射原理知, 存在唯一的$x_y\in\h X$. 使得$Sx_y=x_y$. 即$y=(I-A)^{-1}x_y$. 令$\widetilde x=\lim\limits_{n\rightarrow\infty}S^n y$. 又由$S^ny=\sum\limits_{k=0}^{n}A^ky$ 及(1.1.2) 式知$\widetilde x\in\h X$.
 
-      因$S$连续, 则$S\widetilde x=S(\lim_{n\rightarrow\infty}S^ny)=\lim_{n\rightarrow\infty}S^{n+1}y=\widetilde x$. 由压缩映射原理的唯一性知, $\widetilde x=x_y$, 即
+      因$S$连续, 则$S\widetilde x=S(\lim\limits_{n\rightarrow\infty}S^ny)=\lim\limits_{n\rightarrow\infty}S^{n+1}y=\widetilde x$. 由压缩映射原理的唯一性知, $\widetilde x=x_y$, 即
       \[
       y=(I-A)x_y=(I-A)\widetilde x=(I-A)(\lim_{n\rightarrow\infty}S^n)y.
       \]
-      由$y$的任意性知, $(I-A)(\lim_{n\rightarrow\infty}S^n)=I$. 类似可证$(\sum_{n}^{\infty}A^n)(I-A)=I$. 故
+      由$y$的任意性知, $(I-A)(\lim\limits_{n\rightarrow\infty}S^n)=I$. 类似可证$(\sum\limits_{n=0}^{\infty}A^n)(I-A)=I$. 故
       \[(I-A)^{-1}=\sum_{n=0}^{\infty}A^n.\]
       且\[
       \|(I-A)^{-1}\|\leq\sum_{n=0}^{\infty}\|A\|^n=\frac{1}{1-\|A\|}.
       \]
 
-      (3) 当$|x|<1$时, $\|A_x\|_{\h L(\kx R)}<1$. 由(2)知, $(I-A)^{-1}=\sum_{n=0}^{\infty}A_x^n$. 故$(I-A)(\sum_{n=0}^{\infty}A_x^n)=I$. 注意到$I=1$且$A_x(1)=x$, 知
+      (3) 当$|x|<1$时, $\|A_x\|_{\h L(\kx R)}<1$. 由(2)知, $(I-A)^{-1}=\sum\limits_{n=0}^{\infty}A_x^n$. 故$(I-A)(\sum\limits_{n=0}^{\infty}A_x^n)=I$. 注意到$I=1$且$A_x(1)=x$, 知
       \[
       (1-x)(\sum_{n=0}^{\infty}x^n)=1.
       \]
-      从而$(1-x)^{-1}=\sum_{n=0}^{\infty}x^n$.
+      从而$(1-x)^{-1}=\sum\limits_{n=0}^{\infty}x^n$.
     \end{proof}
   \begin{exercise}[补充题]
    $\sigma(A^{-1})=\{\lambda^{-1}:\lambda\in\sigma(A)\}$
@@ -342,7 +342,7 @@
     \begin{equation}\label{e2}
       \|S_n(x)\|_{\h X}=\|\sum_{i=1}^{n}C_i(x)e_i\|_{\h X}\leq M_0 N_0 \|e_0\|_{\h X} \|x\|_{\h X},
     \end{equation}
-    其中$M_0:=\max\{M_1,\cdots,M_{N_0}\},\ \|e_0\|_{\h X}:=\max\{\|e_1\|,\cdots,\|e_{N_0}\|\}$. 由(\ref{e1})和(\ref{e2})知, $\exists \widetilde M > 0,\forall x\in\h X$,
+    其中$M_0:=\max\{M_1,\cdots,M_{N_0}\},\ \|e_0\|_{\h X}:=\max\{\|e_1\|,\cdots,\|e_{N_0}\|\}$. 由(\ref{e1}) 和(\ref{e2})知, $\exists \widetilde M > 0,\forall x\in\h X$,
     \[
     \sup_{n\in\kx N}\|S_n(x)\|_{\h X}\leq \widetilde M.
     \]
@@ -354,7 +354,7 @@
   \begin{proof}
     若不然, $A\in \mathfrak C$且$A$有有界逆, 即$A^{-1}\in\h L(\h X)$. 由命题1.2.6(vi) 可知, $AA^{-1}=I\in\mathfrak C(\h X)$. $\forall B\in\h X$且$B$ 为有界集, $\overline{I(B)}$为$\h X$中的紧集. 从而$\overline B$为$\h X$中的紧集, 故$\overline{B}$自列紧.
 
-    $\forall\{x_n\}_{n\in\kx N}\subset B\subset \overline B$, 由$\overline B$ 是自列紧的知$\{x_n\}_{n\in\kx N}$有收敛子列, 故$B$是列紧的. 由《泛函分析(上册)》推论1.4.30: “$B^*$空间$\h X$是有穷维的, 当且仅当任意有界集是列紧的.” 可知$\h X$ 是有穷维的. 矛盾.
+    $\forall\{x_n\}_{n\in\kx N}\subset B\subset \overline B$, 由$\overline B$ 是自列紧的知$\{x_n\}_{n\in\kx N}$有收敛子列, 故$B$是列紧的. 由\cite{zgq1990}推论1.4.30: “$B^*$空间$\h X$是有穷维的, 当且仅当任意有界集是列紧的.” 可知$\h X$是有穷维的. 矛盾.
   \end{proof}
   \begin{exercise}
     设$\h X$为Banach空间, $A\in\h L(\h X)$. 满足对$\forall x \in\h X$,
@@ -380,7 +380,7 @@
     是$\ell^p$上的紧算子.
   \end{exercise}
   \begin{proof}
-    $\forall \xi=(\xi_1,\xi_2,\cdots,\xi_n,\cdots)\in\ell^p$. 令$T_N\xi=(\omega_1\xi_1,\omega_2\xi_2,\cdots,\omega_n\xi_n,0,\cdots)$. 下证$T_N\xi$为$\ell^p$上的有界线性算子.
+    $\forall \xi=(\xi_1,\xi_2,\cdots,\xi_n,\cdots)\in\ell^p$. 令$T_N\xi=(\omega_1\xi_1,\omega_2\xi_2,\cdots,\omega_n\xi_n,0,\cdots)$. 下证$T_N\xi$ 为$\ell^p$上的有界线性算子.
 
     ①线性: $\forall \xi,\eta\in\ell^p$,
     \[
@@ -429,7 +429,7 @@
 
     $\forall f\in\h X^*$, 由F$\cdot$Riesz定理, 存在唯一的$y_f\in\h X$, 使$f(x)=(x,y_f)$. 故$f(e_n)=(e_n,y_f)=\overline{(y_f,e_n)}$, 由于$y_f\in\h X$, 故$\lim\limits_{n\rightarrow\infty}(y_f,e_n)=0$. 于是$\lim\limits_{n\rightarrow\infty}\overline{(y_f,e_n)}=0$, 从而$\lim\limits_{n\rightarrow\infty}f(e_n)=0$, 故$e_n\rightharpoonup 0$.
 
-    由命题1.2.14知, $A$是全连续算子, 故$Ae_n\rightarrow 0$. 由《泛函分析（上册）》习题2.5.18知, 在$H$中$x_n\rightharpoonup x_0, y_n\rightarrow y_0$, 有$(x_n,y_n)\rightarrow(x_0,y_0)$. 故$\lim\limits_{n\rightarrow\infty}(Ae_n,e_n)=0$.
+    由命题1.2.14知, $A$是全连续算子, 故$Ae_n\rightarrow 0$. 由\cite{zgq1990}习题2.5.18知, 在$H$中$x_n\rightharpoonup x_0, y_n\rightarrow y_0$, 有$(x_n,y_n)\rightarrow(x_0,y_0)$. 故$\lim\limits_{n\rightarrow\infty}(Ae_n,e_n)=0$.
   \end{proof}
   \begin{exercise}
     证明注记1.2.23中的$\ell^2(\Gamma)$为Hilbert空间.
@@ -460,7 +460,7 @@
     \[
     \begin{aligned}
     \|f_n-f\|_{\ell^2(\Gamma)}&=\left\{\sum_{x\in\Gamma}\lim_{m\rightarrow\infty}|f_n(x)-f_m(x)|^2\right\}^{1/2}\\
-    \text{(Fatou引理)}&\leq \liminf_{m\rightarrow\infty}\left\{\sum_{x\in\Gamma}|f_n(x)-f_m(x)|^2\right\}^{1/2}.
+    \text{(Fatou引理)}&\leq \varliminf_{m\rightarrow\infty}\left\{\sum_{x\in\Gamma}|f_n(x)-f_m(x)|^2\right\}^{1/2}.
     \end{aligned}
     \]
     再令$n\rightarrow\infty$, 则
@@ -530,7 +530,7 @@
     \end{matrix}
     \right).
     \]
-    则 $\sum_{i=1}^\infty\sum_{j=1}^\infty|a_{ij}|^2=\sum_{n=1}^\infty\frac{1}{n}=\infty$. 由例题1.3.7知, $T$为紧算子.
+    则 $\sum_{i=1}^\infty\sum_{j=1}^\infty|a_{ij}|^2=\sum_{n=1}^\infty\frac{1}{n}=\infty$. 由例题1.3.7知, $T$ 为紧算子.
 
     iii) 由习题1.2.5知, $a_{m,m}\rightarrow 0 ,m\rightarrow 0 \Longrightarrow T\in\mathfrak C(\ell^2)$. 若$T\in \mathfrak C(\ell^2)$, 则$T\in\h L(\ell^2)$. 于是
     \[
@@ -566,7 +566,7 @@
   \[
   T_1^{(m)}(\{x_n\}_{n\in\kx Z}):=\{\cdots,0,\lambda_m x_{-m},\cdots,\lambda_0 x_0,\cdots,\lambda_m x_m,0,\cdots\},
   \]
-  则$T_1^{(m)}\in\h F(\ell^2(\kx Z))$. 由$\lim\limits_{i\rightarrow\infty}\lambda_i=0$知, $\forall \varepsilon > 0, \exists N^*\in\kx N$, 使当$i>N^*$时, $|\lambda_i|<\varepsilon$. 此时
+  则$T_1^{(m)}\in\h F(\ell^2(\kx Z))$. 由$\lim\limits_{i\rightarrow\infty}\lambda_i=0$ 知, $\forall \varepsilon > 0, \exists N^*\in\kx N$, 使当$i>N^*$时, $|\lambda_i|<\varepsilon$. 此时
   \[
   \begin{aligned}
   \|T_1^{(m)}-T_1\|_{\h L(\ell^2(Z))}
@@ -657,7 +657,7 @@
     (2) 若$A$有界. 求$\sigma(A)$.
   \end{exercise}
   \begin{proof}
-    (1)($\Rightarrow$) 反证法. 若$\sup_{i\in\kx N}|a_i|=\infty$, 对$\forall k\in\kx N$, 取$e_k:=(0,0,\cdots,1,0,\cdots)$. 则$\|Ae_k\|_{\ell^2}=1$. 故由算子范数定义知$\|A\|\geq\|Ae_k\|_{\ell^2}=|a_k|$. 因此$\infty=\sup_{k\in\kx N}|a_k|\leq\|A\|$. 这与$A\in\h L(\ell^2)$矛盾. 即$\sup_{i\in\kx N}|a_i|<\infty$. 即$\{a_i\}_{i\in\kx N}$为有界数列.
+    (1)($\Rightarrow$) 反证法. 若$\sup_{i\in\kx N}|a_i|=\infty$, 对$\forall k\in\kx N$, 取$e_k:=(0,0,\cdots,1,0,\cdots)$. 则$\|Ae_k\|_{\ell^2}=1$. 故由算子范数定义知$\|A\|\geq\|Ae_k\|_{\ell^2}=|a_k|$. 因此$\infty=\sup_{k\in\kx N}|a_k|\leq\|A\|$. 这与$A\in\h L(\ell^2)$矛盾. 即$\sup_{i\in\kx N}|a_i|<\infty$. 即$\{a_i\}_{i\in\kx N}$ 为有界数列.
 
     ($\Leftarrow$) $A$显然为线性算子且对$\forall x\in\ell^2$, 有
     \[
@@ -671,7 +671,7 @@
     \[
     (\lambda I-A)(x_1,x_2,\cdots)=((\lambda-a_1)x_1,(\lambda-a_2)x_2,\cdots)=\theta.
     \]
-    有$x_i=0,\forall i\in\kx N$, 即$x=\theta$. 故$(\lambda I-A)$为单射, 即$(\lambda I-A)^{-1}$存在. 注意到对$\forall \lambda\notin\overline{\{a_i:i\in\kx N\}}$, 存在正常数$c$, 使得对$\forall i\in\kx N$, 有$|\lambda-a_i|>c$. 由此及$(\lambda I-A)^{-1}$存在且对$\forall x\in\ell^2$,
+    有$x_i=0,\forall i\in\kx N$, 即$x=\theta$. 故$(\lambda I-A)$为单射, 即$(\lambda I-A)^{-1}$存在. 注意到对$\forall \lambda\notin\overline{\{a_i:i\in\kx N\}}$, 存在正常数$c$, 使得对$\forall i\in\kx N$, 有$|\lambda-a_i|>c$. 由此及$(\lambda I-A)^{-1}$ 存在且对$\forall x\in\ell^2$,
     \[
     (\lambda I-A)^{-1}(x_1,x_2,\cdots)=(\frac{1}{\lambda-a_1}x_1,\frac{1}{\lambda-a_2}x_2,\cdots)
     \]
@@ -912,7 +912,7 @@
     \[
     (Px,x)=\|Px\|_H^2=(Px,Px)=(P^2x,x),
     \]
-    所以$((P-P^2)x,x)=0,\forall x\in H$. 再由《泛函分析(上册)》习题1.6.1中的极化恒等式, 有
+    所以$((P-P^2)x,x)=0,\forall x\in H$. 再由\cite{zgq1990}习题1.6.1中的极化恒等式, 有
     \[
     ((P-P^2)x,y)=0,\forall x,y\in H.
     \]
@@ -923,26 +923,234 @@
     ((I-P)x,Py)=(x,Py)-(Px,Py)=(x,Py)-(x,P^2y)=0.
     \]
     从而$(I-P)x\in M^\bot$, 即$P$为$H\rightarrow M$的正交投影算子.
+
   \end{proof}
   \chapter{Banach 代数}
   \section{代数准备知识}
   \begin{exercise}
     在注记2.1.8中, 若$\h A$为一个Banach代数, 并在$\hat {\h A}$上赋予范数
     \[
-    \|(x,\alpha):=\|x\|+|\alpha|\|.
+    \|(x,\alpha)\|:=\|x\|+|\alpha|\|.
     \]
     证明$\hat {\h A}$是一个Banach代数.
   \end{exercise}
+  \begin{proof}
+    ① 由习题2.1.3知, $\hat{\h A}$是一个代数.
+
+    ② 首先说明$\|\cdot\|$是范数. $\forall (a,\lambda)\in\hat{\h A}$,
+
+    i) $\|(a,\lambda)\|\geq 0$显然成立. $\|(a,\lambda)\|=0\Leftrightarrow \|a\|+\|\lambda\|=0\Leftrightarrow \|a\|=0=\|\lambda\|\Leftrightarrow (a,\lambda)=(\theta,0)$.
+
+    ii) $\|(a,\lambda)+(b,\mu)\|=\|(a+b,\lambda+\mu)\|=\|a+b\|+|\lambda + \mu|\leq \|a\|+\|b\|+|\lambda|+|\mu|=\|(a,\lambda)\|+\|(b,\mu)\|$.
+
+    iii) $\|\alpha (a,\lambda)\|=\|(\alpha a,\alpha\lambda)\|=\|\alpha a\|+\|\alpha \lambda\|=|\alpha|(\|a\|+|\lambda|)=|\lambda|\|(a,\lambda)\|$.
+
+    再证其完备性. 设$\{(a_n,\lambda_n)\}_{n\in\kx N}$为$\hat {\h A}$中的基本列. 由$\h A$ 和$\kx C$的完备性知, $\exists a\in\h A,\lambda\in\kx C$, 使
+    \[
+    \|a_n-a\|\rightarrow 0,|\lambda_n-\lambda|\rightarrow 0.
+    \]
+    那么
+    \[
+    \|(a_n,\lambda_n)-(a,\lambda)\|=\|a_n-a\|+|\lambda_n-\lambda|\rightarrow 0.
+    \]
+    故$\hat{\h A}$完备. $\hat{\h A}$在$\|\cdot\|$下是一个完备的Banach空间.
+
+    ③ 最后证明$\|(a,\lambda)(b,\lambda)\|\leq\|(a,\lambda)\|\|(b,\lambda)\|$.
+    \[
+    \begin{aligned}
+      \|(a,\lambda)(b,\mu)\|
+      &=\|(ab+\lambda b+\mu a,\lambda\mu)\|\\
+      &=\|ab+\lambda b+\mu a\|+\|\lambda\mu\|\\
+      &\leq \|ab\|+|\lambda|\|b\|+|\mu|\|a\|+|\lambda\mu|\\
+      &\leq\|a\|\|b\|+|\lambda|\|b\|+|\mu|\|a\|+|\lambda||\mu|\\
+      &=(\|a\|+|\lambda|)(\|b\|+|\mu|)\\
+      &=\|(a,\lambda)\|\|(b,\mu)\|.
+    \end{aligned}
+    \]
+    综上， $\hat{\h A}$是一个Banach代数.
+  \end{proof}
+
+  \begin{exercise}
+    证明定义2.1.1中$(a+b)(c+d)=ac+bc+ad+bd$等价于
+    \[
+    \left\{
+    \begin{aligned}
+      &(a+b)c=ac+bc\\
+      &a(c+d)=ac+ad.
+    \end{aligned}
+    \right.
+    \]
+    且$(\lambda\mu)(ab)=(\lambda a)(\mu b)$等价于
+    \[
+    \left\{
+    \begin{aligned}
+      &\lambda(ab)c=(\lambda a)b\\
+      &\lambda(ab)=a(\lambda b).
+    \end{aligned}
+    \right.
+    \]
+  \end{exercise}
+  \begin{proof}
+    ① ($\Rightarrow$) 若$(a+b)(c+d)=ac+bc+ad+bd$. 取$d=\theta$, 则$(a+b)c=ac+bc$. 同理取$b=\theta$, 则$a(c+d)=ac+ad$.
+
+    ($\Leftarrow$) 若
+  \[
+    \left\{
+    \begin{aligned}
+      &(a+b)c=ac+bc\\
+      &a(c+d)=ac+ad.
+    \end{aligned}
+    \right.
+  \]
+  则$(a+b)(c+d)=(a+b)c+(a+b)d=ac+bc+ad+bd$.
+
+  ② ($\Rightarrow$) 令$\mu=1$, 得$\lambda(ab)=(\lambda a)b,\forall\lambda\in\kx C$. 令$\lambda = 1$, 得$\mu(ab)=a(\mu b),\forall \mu\in\kx C$.
+
+  ($\Leftarrow$) $(\lambda\mu)(ab)=(\lambda\mu a)b=\mu (\lambda a)b=(\lambda a)(\mu b)$.
+  \end{proof}
+
+ \begin{exercise}
+    设$\hat{\h A}$为一个代数, 令$\hat{\h A}=\h A\times\kx C$并且规定$\hat{\h A}$上代数运算如下:
+    \[
+    \begin{aligned}
+    \alpha(a,\lambda)+\beta(b,\mu)&:=(\alpha a+\beta b,\alpha\lambda + \beta\mu).\\
+    (a,\lambda)(b,\mu)&:=(ab+\lambda b+\mu a,\lambda\mu).
+    \end{aligned}
+    \]
+    $(a,\lambda), (b,\mu)\in\hat{\h A},\alpha\beta\in\kx C$. 证明$\hat{\h A}$为一个代数.
+  \end{exercise}
+  \begin{proof}
+    ① 易验证$\hat{\h A}$满足线性空间的八条性质, 故$\hat{\h A}$为线性空间.
+
+    ② 结合律:
+    \[
+    [(a,\lambda)(b,\mu)](c,\xi)=(a,\lambda)[(b,\mu)(c,\xi)].
+    \]
+
+   ③
+   \[
+   [(a,\lambda)+(b,\mu)](c,\xi)=(a,\lambda)(c,\xi)+(b,\mu)(c,\xi),
+   \]
+   \[
+   (a,\lambda)[(c,\xi)+(d,\eta)]=(a,\lambda)(c,\xi)+(a,\lambda)(d,\eta).
+   \]
+
+   ④ \[
+   \alpha[(a,\lambda)(b,\mu)]=[\alpha(a,\lambda)](b,\mu),
+   \]
+   \[
+   \alpha[(a,\lambda)(b,\mu)]=(a,\lambda)[\alpha(b,\mu)].
+   \]
+
+   综上, $\hat{\h A}$为一个代数.
+  \end{proof}
+
+  \begin{exercise}[补充题]
+    设$\h A$是一个代数. $x,y\in\h A$, 记$G(\h A)$为$\h A$中的全体可逆元.
+    \begin{enumerate}[i)]
+      \item 若$x,xy\in G(\h A)$, 证明$y\in G(\h A)$.
+      \item 若$xy,yx\in G(\h A)$. 证明$x,y\in G(\h A)$.
+      \item 说明可能存在$xy=e$, 但$yx\neq e$的情况.
+      \item 若$xy=e$且$yx=z\neq e$. 说明$z$是非平凡幂等元.($z^2=z,z\neq 0$)
+    \end{enumerate}
+  \end{exercise}
+  \begin{proof}
+    i) 因$x,xy\in G(\h A)$. 则$y=x^{-1}xy$. 故$y(x^{-1}xy)^{-1}=e$. 由于$G(\h A)$是群, 故$y\in G(\h A)$.
+
+    ii) 因$x,y\in G(\h A)$, 则$xy(xy)^{-1}=e$. 从而$x^{-1}=y(xy)^{-1}$. 即$x\in G(\h A)$. 类似可证$y\in G(\h A)$.
+
+    iii) 令$\h A:=\h L(\ell^2)$. 令
+    \[
+    x:\left\{
+    \begin{aligned}
+      \ell^2&\rightarrow\ell^2\\
+      \{a_n\}_{n\in\kx N}&\mapsto (a_2,a_3,\cdots)
+    \end{aligned}
+    \right.,
+    y:\left\{
+    \begin{aligned}
+      \ell^2&\rightarrow\ell^2\\
+      \{a_n\}_{n\in\kx N}&\mapsto (0,a_1,a_2,\cdots)
+    \end{aligned}
+    \right..
+    \]
+    易知满足条件.
+
+    iv) 因为$z^2=(yx)(yx)=y(xy)x=yx=z$, 故只需证$z\neq\theta$. 事实上, 若$z=\theta$, 则$\theta=(yx)y=y(xy)=y$. 从而$xy=x\theta=\theta$. 矛盾. 所以$z$是非平凡幂等元.
+  \end{proof}
   \section{Banach 代数}
   \begin{exercise}
     证明例2.2.6中$\h A$完备.
   \end{exercise}
+  \begin{proof}
+    $S^1$是平面上的单位圆周且
+    \[
+    \h A:=\{u\in C(S^1):u(e^{i\theta})=\sum_{n\in\kx Z}c_n e^{in\theta},\sum_{n\in\kx Z}|c_n|<\infty\}.
+    \]
+    范数$\|u\|=\sum_{n\in\kx Z}|c_n|$.
+
+    设$\{u^{(m)}\}$为$\h A$中的基本列. $u^{(m)}(e^{i\theta})=\sum_{n\in\kx Z}c_n^{(m)}e^{in\theta}$. 则
+    \[
+    \|u^{(m)}-u^{(\ell)}\|=\sum_{n\in\kx Z}|c_n^{(m)}-c_n^{(\ell)}|\rightarrow 0,m,\ell\rightarrow\infty.
+    \]
+    即对$\forall n\in\kx Z$, 有$|c_n^{(m)}-c_n^{(\ell)}|\rightarrow 0,m,\ell\rightarrow \infty$. 故对$\forall n\in\kx Z, \{c_n^{(m)}\}$为$\kx C$中的基本列. 由$\kx C$的完备性, 可设其极限为$c_n$. 令$u(e^{i\theta})=\sum_{n\in\kx N}c_ne^{in\theta}$. 因为
+    \[
+    \max_{\theta\in [0,2\pi]}|(u_j-u)(e^{i\theta})|=\max_{\theta\in [0,2\pi]}\left|\sum_{n\in\kx Z } (c_n^{(j)}-c_n)(e^{i\theta})\right|
+    \leq\sum_{n\in\kx Z}|c_n^{(j)}-c_n|\rightarrow 0,j\rightarrow\infty.
+    \]
+    即$u_j\rightrightarrows u$. 故$u\in C(S^1)$.
+    \[
+    \begin{aligned}
+      \|u^{(m)}-u\|
+      &=\sum_{n\in\kx Z}|c_n^{(m)}-c_n^{(\ell)}|\\
+      &=\sum_{n\in\kx Z}(\lim_{\ell\rightarrow\infty}(c_n^{(m)}-c_n^{\ell})\\
+      \text{(Fatou 引理)}&\leq\varliminf_{\ell\rightarrow\infty}\sum_{n\in\kx Z}|c_n^{(m)}-c_n^{(\ell)}|.
+    \end{aligned}
+    \]
+    再令$m\rightarrow\infty$. 则
+    \[
+    \lim_{m\rightarrow\infty}\|u^{(m)}-u\|\leq\lim_{m\rightarrow\infty}\varliminf_{\ell\rightarrow\infty}\sum_{n\in\kx Z}|c_n^{(m)}-c_n^{(\ell)}|=0.
+    \]
+    即$u^{(m)}\rightarrow u, m\rightarrow\infty$. 又
+    \[
+    \|u\|\leq\|u^{(m)}-u\|+\|u^{(m)}\|<\infty.
+    \]
+    故$u\in\h A$. 完备性得证.
+  \end{proof}
   \begin{exercise}
     设$\h B$及其他记号同定理2.2.13且商模$\|[\cdot]\|$定义如定理2.2.13的证明. 证明$\|[e]\|=1$且
     \[
     \inf_{x\in[a],y\in[b]}\|xy\| = \inf_{x\in[a]}\|x\|\inf_{y\in[b]}\|y\|.
     \]
   \end{exercise}
+  \begin{proof}
+    (1) $\h B=\h A/J, \|a\|=\inf_{x\in [a]}\|x\|,\forall a\in \h B$. 由商模的定义知$\|[e]\|=\inf_{x\in [e]}\|x\|\leq\|e\|=1$. 又因为$J$是极大理想, 故由命题2.1.13知, $e\notin J$. 故$[e]\neq [\theta]$. 由此及$\|[e]\|=\|[ee]\|=\|[e][e]\|\leq \|[e]\|\cdot\|[e]\|$. 进一步知$\|[e]\|\geq 1$. 故$\|[e]\|=1$.
+
+    (2) 一方面, 由下确界的定义, $\forall \varepsilon>0, \exists \widetilde x\in [a],\widetilde y\in [b]$, 满足
+    \[
+    \inf_{x\in [a]}\|x\|+\varepsilon \geq \|\widetilde x\|\geq 0, \inf_{y\in [b]}\|x\|+\varepsilon \geq \|\widetilde y\|\geq 0.
+    \]
+    故
+    \[
+    (\inf_{x\in [a]}\|x\|+\varepsilon)(\inf_{y\in [b]}\|y\|+\varepsilon)\geq \|\widetilde x\|\cdot \|\widetilde y\|\geq \|\widetilde x \widetilde y\|\geq \inf_{x\in [a],y\in [b]}\|xy\|.
+    \]
+    由$\varepsilon$的任意性知
+    \[
+    \inf_{x\in[a],y\in[b]}\|xy\| \geq \inf_{x\in[a]}\|x\|\inf_{y\in[b]}\|y\|.
+    \]
+
+    另一方面, 由定理2.2.13知, $\h B=\h A/J \cong \kx C$. 即对$\forall [a]\in \h B, [a]=z[e]$, 其中$[e]$为单位元. $z\in\kx C, |z|=\|[a]\|$. 故对于$[a],[b]\in\h B$. 设$[a]=z_1[e],[b]=z_2[e],z_1,z_2\in\kx C$且$|z_1|=\|[a]\|,|z_2|=\|[b]\|$. $\forall x\in [a]$, 则$x\in z_1[e]$, 存在$\widetilde x\in [e]$, 使$x=z_1\widetilde x$. $\forall y\in [b]$, 则$y\in z_2[e]$, 存在$\widetilde y\in [e]$, 使$y=z_2\widetilde y$. 有$\widetilde x\widetilde y\in [e]$. 事实上, $\exists x',y'\in J$, 使$\widetilde x=e+x',\widetilde y=e+y'$. 则$\widetilde x\widetilde y=e+x'+y'+x'y'$. 由$x',y'\in J$, 故$x'y'\in J$. 故$\widetilde x\widetilde y\in [e]$. 则
+    \[
+    \begin{aligned}
+      \inf_{x\in [a],y\in [b]}\|xy\|
+      &=\inf_{\widetilde x,\widetilde y\in [e]}\|(z_1z_2)\widetilde x\widetilde y\|\\
+      &=\inf_{\widetilde x,\widetilde y\in [e]}|z_1|\cdot |z_2|\|\widetilde x\widetilde y\|\\
+      &=\|[a]\|\cdot \|[b]\|\inf_{\widetilde x,\widetilde y\in [e]}\|\widetilde x,\widetilde y\|\\
+      &\geq \|[a]\|\cdot \|[b]\|\\
+      &=\inf_{x\in [a]}\|x\|\inf_{y\in [b]}\|y\|.
+    \end{aligned}
+    \]
+  \end{proof}
   \begin{exercise}
     设$\h A$是有单位元的Banach代数, $a,b\in\h A$. 证明:
     \begin{enumerate}[(1)]
@@ -951,15 +1159,108 @@
     \item 若$a$可逆, 则$\sigma(ab)=\sigma(ba)$.
     \end{enumerate}
   \end{exercise}
+  \begin{proof}
+    (1) 设$e-ab$的逆为$A$, 则$(e-ab)A=e \Rightarrow A-abA=e \Rightarrow bA-babA = eb=b \Rightarrow (e-ab)(bA)=b \Rightarrow (e-ba)(bAa)=ba \Rightarrow (e-ba)(bAa)-(e-ba)=e \Rightarrow (e-ba)(bAa-e)=e$. 同理$(bAa+e)(e-ba)=e$. 故$e-ba$可逆.
+
+    (2) 若$\lambda\in\sigma(ab)$. 即$\lambda e-ab\notin G(\h A)$. 要证$\lambda\in\sigma(ba)$. 即要证$\lambda e-ba\notin G(\h A)$. 利用反证法. 若$\lambda e-ba\in G(\h A)$. 即$e-ba$可逆. 则$e-(\frac{1}{\lambda}b)a$可逆. 由(1)的结论知$e-\frac{1}{\lambda}ab$可逆. 故$\lambda e-ab$可逆矛盾. 所以$\lambda\in\sigma(ba)$.
+
+    (3) 由(2)知, $\sigma(ba)\backslash\{0\}=\sigma(ba)\backslash\{0\}$. 故只需证明, 若$0\in\sigma(ab)$, 则$0\in\sigma(ba)$.
+
+    若$0\in\sigma(ab)$. 即$ab\in G(\h A)$. 即$ab$可逆, 设其逆为$(ab)^{-1}$. 设$a$的逆为$a^{-1}$. 因$a(ba)=(ab)a \Rightarrow ba=a^{-1}(ab)a \Rightarrow ba[a^{-1}(ab)^{-1}a]=e$且$[a^{-1}(ab)a](ba)=e$. 故$ba$可逆. 反之同理. 证毕.
+  \end{proof}
   \begin{exercise}
     设$\h A$和$\h B$是两个可交换的有单位元的$Banach$代数. $\h B$是半单的. 若$\varphi$ 是$\h A$到$\h B$的一个同态. 求证$\varphi$是连续的.
   \end{exercise}
+  \begin{proof}
+    设$\{a_n\}_{n\in\kx N}\subset\h A$, 且$a_n\rightarrow a,\varphi(a_n)\rightarrow b$. 则$a\in\h A$. 由闭图像定理, 要证$\varphi$连续, 只需$\varphi(a)=b$. 不妨设$\varphi$非零. 若$\varphi$是零映射, 即$\forall a\in \h A,\varphi(a)=0$. 则$\varphi(a_n)=\theta$. 结论显然成立. 
+    
+    设$\bigtriangleup_{\h B}$为$\h B\rightarrow \h C$上的非零同态全体. $\forall h\in\bigtriangleup_{\h B}$. 记$\psi:=h\circ\varphi$. 下证$\psi$是$\h A\rightarrow \h C$的非零连续同态. 
+    
+    ① 由$\varphi$是$\h A\rightarrow \h B$的同态知, $\psi$是$\h A\rightarrow \h C$的同态. 事实上, $\forall a_1,a_2\in \h A. \lambda,\mu\in\h C$. 有
+    \[
+    \begin{aligned}
+    \varphi(\lambda a_1+\mu a_2)&=h\circ\varphi(\lambda a_1+\mu a_2)=h(\lambda\varphi(a_1)+\mu\varphi(a_2))\\
+    &=\lambda (h\circ\varphi)(a_1)+\mu (h\circ\varphi)(a_2)=\lambda\psi(a_1)+\mu\psi(a_2).
+    \end{aligned}
+    \]
+    \[
+    \psi(a_1a_2)=h\circ\varphi(a_1a_2)\xlongequal[]{\varphi\text{同态}} h(\varphi(a_1)\varphi(a_2))=\varphi(a_1)\varphi(a_2).
+    \]
+    故$\psi$是$\h A\rightarrow \h C$的同态映射. 
+    
+    ② 又由$\varphi$与$h$均为非零, 知$\psi$也非零. 
+    
+    ③ 又由命题2.2.14知, $\forall a\in\h A$, $|\psi(a)|\leq\|a\|$. 即$\psi$连续.
+    
+    故$\psi$是$\h A\rightarrow\h C$的非零连续同态. 由假设知$\lim\limits_{n\rightarrow\infty}\varphi(a_n)=b,\lim\limits_{n\rightarrow\infty}a_n=a$. 故
+    \[
+    \begin{aligned}
+      h(b)&=h(\lim_{n\rightarrow\infty}\varphi(a_n))=\lim_{n\rightarrow\infty} h\circ\varphi(a_n)=\lim_{n\rightarrow\infty}\psi(a_n)\\
+      &=\psi(\lim_{n\rightarrow\infty}a_n)=\psi(a)=h(\varphi(a)).
+    \end{aligned}
+    \]
+    故$h(\varphi(a)-b)=0$, 对$\forall h\in\bigtriangleup_{\h B}$均成立. 即$\varphi(a)\rightarrow b\in\ker h$ 对$\forall h\in\bigtriangleup_{\h B}$成立.
+    
+    记$i$为注记2.2.17, 即:
+    \[
+      i:\left\{
+      \begin{aligned}
+      \mathfrak M&\rightarrow \triangle_{\h B}\\
+      J&\mapsto \varphi_J.
+      \end{aligned}
+      \right.
+    \]
+    由引理2.2.19知$i$为双射. 故$\forall h\in\triangle_{\h B}$. 都存在$J\in\mathfrak M$, 使得$h_J=h$. 故$\varphi(a)-b\in\ker h_J$对$\forall h_J\in\bigtriangleup_{\h B}$成立. 
+    
+    由$i$为双射, 即$\varphi(a)-b\in\ker h_J$对$\forall J\in\mathfrak M$均成立. 又由引理2.2.18知$\ker h_J=J$. 故$\varphi(a)-b\in J, \forall J\in\mathfrak M$成立. 即
+    \[
+    \varphi(a)-b\in\cap_{J\in\mathfrak M}J.
+    \]
+    又由$\h B$是半单的. 故$\cap_{J\in\mathfrak M}=\{\theta\}$. 故$\varphi(a)-b=\theta$, 即$\varphi(a)=b$.
+  \end{proof}
   \begin{exercise}
-    略
+    证明定理: 设$\h X$是一个集合, 又设对于每一点$x\in\h X$指定了$\h X$的一个集族$\h U_x$, 它们满足
+    \begin{enumerate}[(i)]
+      \item 对$\forall x\in\h X,\h U_x\neq\varnothing$; 如果$U\in\h U_x$, 则$x\in U$;
+      \item 如果$U,V\in \h U_x$, 则$U\cup V\in\h U_x$;
+      \item 如果$U\in\h U_x$, 并且$U\subset V$, 则$V\in\h U_x$;
+      \item 如果$U\in \h U_x$, 则存在$V\in\h U_x$满足: $V\subset U$且对$\forall y\in V$, 有$V\in \h U_y$.
+    \end{enumerate}
+    则$\h X$有唯一的拓扑$\tau$使得对于每一个$x\in\h X$, 子集族$\h U_x$恰是$x$在拓扑空间$(\h X,\tau)$中的邻域系.
+    
+    设$\h X$是一个Banach空间, 对任意的$n\in\kx N, \varepsilon\in (0,+\infty)$及$\{x_1,x_2,\cdots,x_n\}\subset\h X$, 定义
+    \[
+    V(\varepsilon,x_1,x_2,\cdots,x_n):=\{\varphi\in\h X*:|\varphi(x_i)|<\varepsilon,i\in\{1,2,\cdots,n\}\}.
+    \]
+    城$\h X^*$的任一个含有一个形如(2.2.6)的集合的子集为$\h X^*$中零泛函的一个邻域. 证明所有的这样的邻域构成$\h X^*$原点的邻域系, 且该邻域系及其平移可以唯一确定$\h X^*$的$*$弱拓扑, 并且$\h X^*$依此$*$弱拓扑构成拓扑线性空间. 
   \end{exercise}
+  \begin{proof}
+    参考\cite{xjc2004}第61页, 定理2.3.3.
+  \end{proof}
   \begin{exercise}
     用定理1.1.14即“有界线性算子$A,\ \sigma(A)\neq\varnothing$”来证明定理2.2.10 即“可除Banach代数$\h A$等距同构与$\kx C$”.
   \end{exercise}
+  
+  \begin{proof}
+    令$\h B:=\{ze:z\in\kx C\}$. 为证$\h A$等距同构于$\h C$. 只需证$\h A=\h B$. 即对$\forall a\in \h A,\exists z\in\kx C$, 使得$a=ze$. 若不然, $\exists a_0\in\h A$, 使得$\forall z\in\kx C, a\neq ze$. 由$\h A$可除知, $(ze-a_0)^{-1}$存在. 对此$a_0$, 定义
+    \[
+    f_{a_0}:\left\{
+    \begin{aligned}
+      \h A&\rightarrow \h A\\
+      x&\mapsto a_0 x.
+    \end{aligned}
+    \right.
+    \]
+    则$f_{a_0}\in\h L(A)$. 由此及定理1.1.14知, $\sigma(f_{a_0})\neq\varnothing$. 注意到对$\forall z\in \kx C$. $zI-f_{a_0}$为单射, 且$\forall y\in\kx A$,
+    \[
+    (zI-f_{a_0})((ze-a_0)^{-1}y)=(ze-a_0)(ze-a_0)^{-1}y=y.
+    \]
+    即$zI-f_{a_0}$为单射. 故由性质1.1.4知$(zI-f_{a_0})^{-1}\in\h L(A)$. 即
+    \[
+    z\in\rho(f_{a_0})\Rightarrow \kx C=\rho(f_{a_0})\Rightarrow \sigma(f_{a_0})=\varnothing.
+    \]
+    矛盾.
+  \end{proof}
   \begin{exercise}
     证明以下两条等价.
     \begin{enumerate}[(1)]
@@ -999,14 +1300,14 @@
     证明:
     \begin{enumerate}[(1)]
       \item$\h A$是可交换的Banach代数;
-      \item 令$K:=\{z\in\kx C:1/2\leq|z|\leq2\}$. 则$K$与$\mathfrak M$一一对应, 且$\h A$ 的Gelfand表示是$K$上绝对收敛的Laurent 级数.
+      \item 令$K:=\{z\in\kx C:1/2\leq|z|\leq2\}$. 则$K$与$\mathfrak M$一一对应, 且$\h A$ 的Gelfand表示是$K$ 上绝对收敛的Laurent 级数.
     \end{enumerate}
   \end{exercise}
   \begin{exercise}
     设$M$是$T_2$紧拓扑空间, 证明$M$的全体闭子集与$C(M)$的全体理想间有一一对应.
   \end{exercise}
   \begin{exercise}[补充题]
-    设$\h A$是半单的交换Banach代数. 证明: $\h A$ 的Gelfand表示的值域$\Gamma(\h A)$ 是$C(\mathfrak M)$的闭集的充要条件是存在正常数$k<\infty$, 使得对$\forall a\in \h A$, 有$\|a\|^2\leq k\|a^2\|$.
+    设$\h A$是半单的交换Banach代数. 证明: $\h A$的Gelfand表示的值域$\Gamma(\h A)$ 是$C(\mathfrak M)$的闭集的充要条件是存在正常数$k<\infty$, 使得对$\forall a\in \h A$, 有$\|a\|^2\leq k\|a^2\|$.
   \end{exercise}
   \section{$C^*$代数}
   \begin{exercise}
@@ -1055,7 +1356,7 @@
     证明推论2.5.28.
   \end{exercise}
   \begin{exercise}[补充题1]
-    设$H$为Hilbert空间,$U\in\h L(H)$. 证明以下三个论述等价:
+    设$H$为Hilbert空间, $U\in\h L(H)$. 证明以下三个论述等价:
     \begin{enumerate}[(1)]
       \item$U$是酉算子;
       \item$R(U)=H$且对$\forall x,y\in H,\ (Ux,Uy)=(x,y)$.
@@ -1065,11 +1366,39 @@
   \begin{exercise}[补充题2]
     设$H$为Hilbert空间, $T\in\h L(H)$. 证明:
     \begin{enumerate}[(1)]
-      \item$T^*T$的平方根$P\in\h L(H)$是唯一满足$\|Px\|_H=\|Tx\|_H,\ \forall x\in H$的正算子.
+      \item$T^*T$的平方根$P\in\h L(H)$是唯一满足$\|Px\|_H=\|Tx\|_H,\ \forall x\in H$ 的正算子.
       \item 若$T$可逆, 则有唯一分解$T=UP$, 其中$U$为酉算子, $P$为正算子.
     \end{enumerate}
   \end{exercise}
+  \begin{proof}
+    (1) 注意到$(T^*Tx,x)=(Tx,Tx)=\|Tx\|_H^2\geq 0$. 故$T^*T$为正算子. 由此及推论2.5.9知, $\exists P\in \h L(H)$. 使得$P^2=T^*T$, 且$P=P^*$. 故对$\forall x\in H$,
+    \[
+    \|Px\|_H^2=(Px,Px)=(P^2x,x)=(T^*Tx,x)=(Tx,Tx)=\|Tx\|_H^2.
+    \]
+   下证唯一性: 若$P\in \h L(H)$且$P=P^*$. 则对$\forall x\in H$,
+   \[
+   \|Px\|_H^2=\|Tx\|_H\Leftrightarrow (Px,Px)=(Tx,Tx) \Leftrightarrow (P^2x,x)=(T^*Tx,x).
+   \]
+   从而由断言知, $P^2=T^*T$. 即$P$为$T^*T$的正平方根.
+
+   (2) 若$T$可逆, 则$T^*,T^*T$也可逆. 类似(1)可证, $T^*T$为正算子. 故由推论2.5.9知. $T^*T$存在可逆平方根$P$. 令$U:=TP^{-1}$, 则$U$可逆且
+   \[
+   U^*U=(P^{-1})^*T^*TP^{-1}=P^{-1}P^2P^{-1}=I.
+   \]
+   即$U$为酉算子.
+
+   下证唯一性. 若$T=\widetilde{U}\widetilde{P}$为另一满足上述条件的分解. 则
+   \[
+   T^*T=\widetilde{P}^*\widetilde{U}^*\widetilde{U}\widetilde{P}=\widetilde{P}^*\widetilde{P}=\widetilde{P}^2.
+   \]
+   由正平方根的唯一性知$P=\widetilde{P}$. 从而$U=\widetilde U$, 唯一性得证.
+  \end{proof}
+  \begin{comment}
   \begin{exercise}[补充题3]
     设$H$为可分的Hilbert空间, $\{\mu_k\}_{k\in\kx N}\subset\kx C$是任意有界复数列. 证明: 在$H$上存在唯一一个以$\mu_k$ 为特征值的正常算子$T$, 并且$\|T\|=\sup\limits_{k\in\kx N}|\mu_k|$.
   \end{exercise}
+  \end{comment}
+  \addcontentsline{toc}{chapter}{参考文献}
+  \bibliography{reference}
+  \bibliographystyle{plain}
 \end{document}

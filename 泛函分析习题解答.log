@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.12.27)  24 FEB 2018 16:11
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.12.27)  10 MAR 2018 22:00
 entering extended mode
 **C:/我的师大云盘/2学习文档/2017-2018A/泛函作业/泛函习题/泛�
 ��分析习题解答.tex
@@ -505,6 +505,12 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box40
 \rot@mess@toks=\toks26
 )
+(C:\CTEX\MiKTeX\tex\latex\tools\verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks27
+\verbatim@line=\toks28
+\verbatim@in@stream=\read1
+)
 \c@exercise=\count193
 
 (C:\我的师大云盘\2学习文档\2017-2018A\泛函作业\泛函习题\泛�
@@ -594,12 +600,12 @@ LaTeX Font Info:    ... okay on input line 23.
 \scratchbox=\box41
 \nofMPsegments=\count195
 \nofMParguments=\count196
-\everyMPshowfont=\toks27
+\everyMPshowfont=\toks29
 \MPscratchCnt=\count197
 \MPscratchDim=\dimen174
 \MPnumerator=\count198
 \makeMPintoPDFobject=\count199
-\everyMPtoPDFconversion=\toks28
+\everyMPtoPDFconversion=\toks30
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -708,21 +714,19 @@ n/10.95/55 � \C19/rm/m/n/10.95/40 $[][] \OMS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.
 95 []\OMS/cmsy/m/n/10.95 j[] \OML/cmm/m/it/10.95 <$
  []
 
-[4] [5] [6]
-Overfull \hbox (9.0254pt too wide) in paragraph at lines 270--271
-[]\OT1/cmr/m/n/10.95 (3) \C19/rm/m/n/10.95/40 $\OMS/cmsy/m/n/10.95 j\OML/cmm/m
-/it/10.95 x\OMS/cmsy/m/n/10.95 j \OML/cmm/m/it/10.95 < \OT1/cmr/m/n/10.95 1$\C1
-9/rm/m/n/10.95/55 �\OT1/cmr/m/n/10.95 , $\OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.
-95 A[]\OMS/cmsy/m/n/10.95 k[] \OML/cmm/m/it/10.95 < \OT1/cmr/m/n/10.95 1$. \C19
-/rm/m/n/10.95/62 d\OT1/cmr/m/n/10.95 (2)\C19/rm/m/n/10.95/64 \OT1/cmr/m/n/10.9
-5 , $(\OML/cmm/m/it/10.95 I \OMS/cmsy/m/n/10.95   \OML/cmm/m/it/10.95 A\OT1/cmr
-/m/n/10.95 )[] = [][] \OML/cmm/m/it/10.95 A[]$\OT1/cmr/m/n/10.95 . \C19/rm/m/n/
-10.95/43 $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 I \OMS/cmsy/m/n/10.95   \OML
-/cmm/m/it/10.95 A\OT1/cmr/m/n/10.95 )([][] \OML/cmm/m/it/10.95 A[]\OT1/cmr/m/n/
-10.95 ) =$
+[4] [5] [6] [7]
+Overfull \hbox (1.05981pt too wide) in paragraph at lines 344--346
+\C19/rm/m/n/10.95/52 � \C19/rm/m/n/10.95/64 �$\OML/cmm/m/it/10.95 M[] \OT1/cmr/
+m/n/10.95 := []\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 M[]; []  ; M[]\OMS/cmsy
+/m/n/10.95 g\OML/cmm/m/it/10.95 ;  \OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 e[]
+\OMS/cmsy/m/n/10.95 k[] \OT1/cmr/m/n/10.95 := []\OMS/cmsy/m/n/10.95 fk\OML/cmm/
+m/it/10.95 e[]\OMS/cmsy/m/n/10.95 k\OML/cmm/m/it/10.95 ; []  ; \OMS/cmsy/m/n/10
+.95 k\OML/cmm/m/it/10.95 e[]\OMS/cmsy/m/n/10.95 kg$\OT1/cmr/m/n/10.95 . \C19/rm
+/m/n/10.95/62 d\OT1/cmr/m/n/10.95 (1.2.1[]) \C19/rm/m/n/10.95/43 �\OT1/cmr/m/n/
+10.95 (1.2.2[])\C19/rm/m/n/10.95/64 \OT1/cmr/m/n/10.95 ,
  []
 
-[7] [8]
+[8]
 LaTeX Font Info:    Try loading font information for U+euf on input line 355.
  (C:\CTEX\MiKTeX\tex\latex\amsfonts\ueuf.fd
 File: ueuf.fd 2009/06/22 v3.00 Euler Fraktur
@@ -786,10 +790,12 @@ mm/m/it/10.95 `[]$\OT1/cmr/m/n/10.95 , \C19/rm/m/n/10.95/63 K$\OML/cmm/m/it/10.
 $
  []
 
-[15] [16] [17] [18] [19] [20]
+[15] [16] [17] [18] [19] [20] [21]
 �ڶ���
+[22
 
-Overfull \hbox (10.48065pt too wide) in paragraph at lines 941--942
+] [23] [24]
+Overfull \hbox (10.48065pt too wide) in paragraph at lines 1121--1122
 []\C19/rm/m/it/10.95/55 $\U/rsfs/m/n/10.95 B$\C19/rm/m/it/10.95/45 9 \C19/rm/m
 /it/10.95/52 � \C19/rm/m/it/10.95/56 � \C19/rm/m/it/10.95/45 P \C19/rm/m/it/10.
 95/43 � \C19/rm/m/it/10.95/57 � \C19/rm/m/it/10.95/40 � \C19/rm/m/it/10.95/48 n
@@ -803,10 +809,8 @@ it/10.95/50 �$\OMS/cmsy/m/n/10.95 k\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 e\OT
 1/cmr/m/n/10.95 ]\OMS/cmsy/m/n/10.95 k \OT1/cmr/m/n/10.95 =$
  []
 
-[21
-
-] [22]
-Overfull \hbox (6.21263pt too wide) in paragraph at lines 1027--1028
+[25] [26] [27] [28] [29]
+Overfull \hbox (6.21263pt too wide) in paragraph at lines 1328--1329
 []\C19/rm/m/it/10.95/55 $\U/rsfs/m/n/10.95 A$\C19/rm/m/it/10.95/55 � \C19/rm/m
 /it/10.95/61 � \C19/rm/m/it/10.95/42 � \C19/rm/m/it/10.95/46  \C19/rm/m/it/10.
 95/44 � \C19/rm/m/it/10.95/40 $\OML/cmm/m/it/10.95 C[]$\C19/rm/m/it/10.95/39 �
@@ -818,28 +822,32 @@ Overfull \hbox (6.21263pt too wide) in paragraph at lines 1027--1028
 /m/it/10.95/58 �\OT1/cmr/m/it/10.95 Hermite
  []
 
-[23] [24]
+[30]
+(C:\我的师大云盘\2学习文档\2017-2018A\泛函作业\泛函习题\泛�
+�分析习题解答.bbl [31]) [32
+
+]
 (C:\我的师大云盘\2学习文档\2017-2018A\泛函作业\泛函习题\泛�
 �分析习题解答.aux) ) 
 Here is how much of TeX's memory you used:
- 12834 strings out of 495354
- 203136 string characters out of 3183858
- 244750 words of memory out of 3000000
- 15655 multiletter control sequences out of 15000+200000
- 59232 words of font info for 209 fonts, out of 3000000 for 9000
+ 12963 strings out of 495354
+ 205621 string characters out of 3183858
+ 246417 words of memory out of 3000000
+ 15778 multiletter control sequences out of 15000+200000
+ 61906 words of font info for 218 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  36i,13n,35p,926b,552s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei
+<C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei
 .ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Font
 s/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WIND
-OWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf>
+OWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf>
 <C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/sim
-kai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/F
-onts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simkai.ttf><C:/W
-INDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simkai.t
-tf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/
-simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOW
-S/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simkai.ttf><C
+kai.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/F
+onts/simsun.ttc><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/W
+INDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.t
+tf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/
+simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOW
+S/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C
 :/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simka
 i.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fon
 ts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WIN
@@ -847,40 +855,42 @@ DOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf
 ><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/si
 mkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/
 Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simkai.ttf><C:/
-WINDOWS/Fonts/simkai.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.
-ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts
+WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.
+ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts
 /simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDO
-WS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><
+WS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><
 C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/sims
 un.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fo
-nts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WI
+nts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WI
 NDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.tt
 f><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/s
 imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
-/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:
+/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:
 /WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun
 .ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Font
 s/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WIND
-OWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf>
+OWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf>
 <C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/sim
-hei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/CTEX/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/C
-TEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/CTEX/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/CTEX/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pf
-b><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/CTEX/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/CTEX
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmti10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/euler/e
-ufm10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/CT
-EX/MiKTeX/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C:/CTEX/MiKTeX/fonts/type1/hoe
-kwater/rsfs/rsfs5.pfb>
-Output written on 泛函分析习题解答.pdf (25 pages, 798358 bytes).
+hei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/CTEX/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/CTEX/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/CTEX/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmmi12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/CTEX/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmr12.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/CTEX/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/CTEX/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.
+pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/CTEX/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmti10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsf
+onts/euler/eufm10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msam1
+0.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/CTEX/M
+iKTeX/fonts/type1/hoekwater/rsfs/rsfs10.pfb><C:/CTEX/MiKTeX/fonts/type1/hoekwat
+er/rsfs/rsfs5.pfb>
+Output written on 泛函分析习题解答.pdf (33 pages, 873910 bytes).
 PDF statistics:
- 532 PDF objects out of 1000 (max. 8388607)
+ 569 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
