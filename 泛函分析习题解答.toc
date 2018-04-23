@@ -6,7 +6,7 @@
 \contentsline {chapter}{\numberline {第二章\hspace {0.3em}}Banach 代数}{22}
 \contentsline {section}{\numberline {2.1}代数准备知识}{22}
 \contentsline {section}{\numberline {2.2}Banach 代数}{25}
-\contentsline {section}{\numberline {2.3}例子与应用}{29}
-\contentsline {section}{\numberline {2.4}$C^*$代数}{30}
-\contentsline {section}{\numberline {2.5}Hilbert空间上的正常算子}{30}
-\contentsline {chapter}{参考文献}{31}
+\contentsline {section}{\numberline {2.3}例子与应用}{30}
+\contentsline {section}{\numberline {2.4}$C^*$代数}{34}
+\contentsline {section}{\numberline {2.5}Hilbert空间上的正常算子}{36}
+\contentsline {chapter}{参考文献}{40}
